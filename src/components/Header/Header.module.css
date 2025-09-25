@@ -1,0 +1,29 @@
+/* Здесь будут стили хэдера */
+.header {
+  padding: 1rem 0;
+  /* background-color: var(--color-bg); Старайся использовать variables */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
