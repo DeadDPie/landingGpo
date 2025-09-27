@@ -1,0 +1,37 @@
+.card {
+  border: 2px solid var(--color-border-main);
+  border-radius: 25px;
+  padding: 16px 16px 24px 16px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+}
+
+.image {
+  max-width: 326px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: 25% 75%;
+}
+
+.title {
+  margin: 16px 0 8px;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.description {
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.price {
+  margin-top: auto;
+  text-decoration: underline;
+}
