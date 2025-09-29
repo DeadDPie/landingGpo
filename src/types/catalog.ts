@@ -4,4 +4,5 @@ export interface Cake {
   title: string;
   description: string;
   price: number;
+  hasOptions?: boolean;
 }

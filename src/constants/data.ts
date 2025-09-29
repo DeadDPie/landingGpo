@@ -8,6 +8,7 @@ export const data: Cake[] = [
     description:
       "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
     price: 1250,
+    hasOptions: true,
   },
   {
     id: "2",
@@ -22,6 +23,7 @@ export const data: Cake[] = [
     title: "Торт 3",
     description: "Нежный чизкейк с ягодами",
     price: 1459,
+    hasOptions: true,
   },
   {
     id: "1",

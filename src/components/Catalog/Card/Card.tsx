@@ -1,14 +1,32 @@
+"use client";
+import { useState } from "react";
 import Typography from "@/ui/Typography/Typography";
 import styles from "./Card.module.css";
 import type { Cake } from "@/types/catalog";
 import Image from "next/image";
 import CountButton from "../CountButton/CountButton";
+import Modal from "@/components/Modal/Modal";
 
 interface CardProps {
   cake: Cake;
 }
 
 export default function Card({ cake }: CardProps) {
+  const [count, setCount] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleAddClick = () => {
+    if (cake.hasOptions) {
+      setIsModalOpen(true);
+    } else {
+      addToCart();
+    }
+  };
+
+  const addToCart = () => {
+    console.log("Добавлено в корзину:", cake.title, count);
+  };
+
   return (
     <article className={styles.card}>
       <Image
@@ -23,7 +41,6 @@ export default function Card({ cake }: CardProps) {
           {cake.title}
         </Typography>
       </div>
-
       <div className={styles.description}>
         <Typography variant="p1" as="p">
           {cake.description}
@@ -31,12 +48,37 @@ export default function Card({ cake }: CardProps) {
       </div>
       <div className={styles.bottom_container}>
         <div className={styles.price}>
-          <Typography variant="h2" as="p" className={styles.price}>
+          <Typography variant="h2" as="p">
             {cake.price} р/кг.
           </Typography>
         </div>
-        <CountButton />
+
+        <CountButton
+          count={count}
+          setCount={setCount}
+          onAddClick={handleAddClick}
+        />
       </div>
+
+      {isModalOpen && (
+        <Modal onClose={() => setIsModalOpen(false)}>
+          <h3>Выберите параметры</h3>
+          <CountButton
+            count={count}
+            setCount={setCount}
+            onAddClick={() => {}}
+          />
+          <button
+            className={styles.modal_btn}
+            onClick={() => {
+              addToCart();
+              setIsModalOpen(false);
+            }}
+          >
+            Добавить в корзину
+          </button>
+        </Modal>
+      )}
     </article>
   );
 }

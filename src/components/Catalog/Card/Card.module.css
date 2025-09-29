@@ -41,3 +41,13 @@
   align-items: center;
   margin-top: auto;
 }
+
+.modal_btn {
+  color: white;
+  width: 100%;
+  background-color: var(--color-border-main);
+  border: 2px solid var(--color-border-main);
+  border-radius: 35px;
+  padding: 20px 60px 20px 60px;
+  cursor: pointer;
+}

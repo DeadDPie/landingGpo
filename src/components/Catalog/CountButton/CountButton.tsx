@@ -1,19 +1,29 @@
 "use client";
 import Typography from "@/ui/Typography/Typography";
 import styles from "./CountButton.module.css";
-import { useState } from "react";
 import cn from "classnames";
 
-export default function CountButton() {
-  const [count, setCount] = useState<number>(0);
+interface CountButtonProps {
+  count: number;
+  setCount: (value: number) => void;
+  onAddClick: () => void;
+}
+
+export default function CountButton({
+  count,
+  setCount,
+  onAddClick,
+}: CountButtonProps) {
+  const handlePlus = () => {
+    setCount(count + 1);
+    onAddClick();
+  };
 
   return (
-    <div className={styles.wrapper} id="catalog">
+    <div className={styles.wrapper}>
       <button
         className={cn(styles.card_btn, styles.left)}
-        onClick={() => {
-          count > 0 || setCount(count - 1);
-        }}
+        onClick={() => setCount(Math.max(count - 1, 0))}
       >
         <Typography variant="p1" as="p" className={styles.price}>
           -
@@ -27,7 +37,7 @@ export default function CountButton() {
 
       <button
         className={cn(styles.card_btn, styles.right)}
-        onClick={() => setCount(count + 1)}
+        onClick={handlePlus}
       >
         <Typography variant="p1" as="p" className={styles.price}>
           +
