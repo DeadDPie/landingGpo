@@ -12,7 +12,7 @@
 }
 
 .modal {
-  background-color: white;
+  background-color: #3a2a27;
   padding: 32px;
   border-radius: 20px;
   position: relative;
@@ -21,6 +21,7 @@
 }
 
 .closeBtn {
+  color: white;
   position: absolute;
   top: 12px;
   right: 12px;

@@ -62,21 +62,33 @@ export default function Card({ cake }: CardProps) {
 
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)}>
-          <h3>Выберите параметры</h3>
-          <CountButton
-            count={count}
-            setCount={setCount}
-            onAddClick={() => {}}
-          />
-          <button
-            className={styles.modal_btn}
-            onClick={() => {
-              addToCart();
-              setIsModalOpen(false);
-            }}
-          >
-            Добавить в корзину
-          </button>
+          <div className={styles.modal_content}>
+            <h3 className={styles.modal_title}>Выбери начинку и вес!</h3>
+            <div className={styles.modal_count}>
+              <CountButton
+                count={count}
+                setCount={setCount}
+                onAddClick={() => {}}
+              />
+            </div>
+
+            <select className={styles.modal_select}>
+              <option value="">Выбрать начинку</option>
+              <option value="chocolate">Шоколад</option>
+              <option value="strawberry">Клубника</option>
+              <option value="vanilla">Ваниль</option>
+            </select>
+
+            <button
+              className={styles.modal_btn}
+              onClick={() => {
+                addToCart();
+                setIsModalOpen(false);
+              }}
+            >
+              Добавить в корзину
+            </button>
+          </div>
         </Modal>
       )}
     </article>
