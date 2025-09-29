@@ -1,20 +1,17 @@
 .wrapper {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
-  align-content: center;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
   justify-content: center;
-  justify-content: space-between;
-  row-gap: 48px;
+  justify-items: center;
 }
 
 .title {
