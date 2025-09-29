@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.order_btn {
+  max-width: 380px;
+  max-height: 100px;
+  background-color: var(--color-border-main);
+  border: 2px solid var(--color-border-main);
+  border-radius: 35px;
+  padding: 20px 60px 20px 60px;
+}
+
+.order_btn_text {
+  color: white;
+}
