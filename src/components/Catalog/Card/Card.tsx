@@ -2,6 +2,7 @@ import Typography from "@/ui/Typography/Typography";
 import styles from "./Card.module.css";
 import type { Cake } from "@/types/catalog";
 import Image from "next/image";
+import CountButton from "../CountButton/CountButton";
 
 interface CardProps {
   cake: Cake;
@@ -28,10 +29,13 @@ export default function Card({ cake }: CardProps) {
           {cake.description}
         </Typography>
       </div>
-      <div className={styles.price}>
-        <Typography variant="h2" as="p" className={styles.price}>
-          {cake.price} р/кг.
-        </Typography>
+      <div className={styles.bottom_container}>
+        <div className={styles.price}>
+          <Typography variant="h2" as="p" className={styles.price}>
+            {cake.price} р/кг.
+          </Typography>
+        </div>
+        <CountButton />
       </div>
     </article>
   );

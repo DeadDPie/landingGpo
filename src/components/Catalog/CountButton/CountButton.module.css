@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border: 2px solid var(--color-border-main);
+  margin: 0 12px;
+}
+
+.card_btn {
+  width: 32px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.count {
+  border-left: 2px solid var(--color-border-main);
+  border-right: 2px solid var(--color-border-main);
+  padding: 3px 12px;
+}
