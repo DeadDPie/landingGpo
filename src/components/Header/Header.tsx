@@ -44,7 +44,7 @@ export default function Header() {
           <div className={styles.social_icons}>
             <a href="https://vk.com" target="_blank">
               <Image 
-                src="/icons/vk.svg" 
+                src="/icons/vk_header.svg" 
                 alt="ВКонтакте" 
                 width={64}
                 height={64}
@@ -54,7 +54,7 @@ export default function Header() {
 
             <a href="https://t.me" target="_blank">
               <Image 
-                src="/icons/telegram.svg" 
+                src="/icons/telegram_header.svg" 
                 alt="Телеграм" 
                 width={64}
                 height={64}

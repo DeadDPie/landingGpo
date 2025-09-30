@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.hero_container}>
-        {/* Левая колонка */}
+
         <div className={styles.hero_content}>
           <Typography variant="h1" className={styles.hero_title}>
             Вкусные торты
@@ -29,7 +29,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Правая колонка */}
         <div className={styles.hero_main_image}>
           <Image
             src="/images/hero2.png"
