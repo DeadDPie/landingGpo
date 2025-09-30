@@ -8,8 +8,6 @@ export default function Home() {
       <main>
         <Header />
         <Catalog />
-
-        <p>Здесь будем вставлять наши блоки лендинга</p>
         <Order />
       </main>
     </div>

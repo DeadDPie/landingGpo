@@ -1,29 +1,58 @@
-/* Здесь будут стили хэдера */
 .header {
   padding: 1rem 0;
-  /* background-color: var(--color-bg); Старайся использовать variables */
+  background-color: var(--color-background);
+  height: 120px;
+  display: flex;
+  align-items: center;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav {
   display: flex;
-  gap: 2rem;
+  gap: 9rem;
 }
 
 .link {
   color: var(--color-text-main);
   cursor: pointer;
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .link:hover {
   color: var(--color-primary);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.social_icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cart_link {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: block;
+}
+
+.social_icon {
+  transition: transform 0.2s ease;
 }
