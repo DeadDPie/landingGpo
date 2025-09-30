@@ -1,0 +1,50 @@
+.hero {
+  background-color: #a0231f;
+  padding: 32px;
+  color: #ffffff;
+}
+
+.hero_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero_title {
+  font-size: 64px;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero_description {
+  font-size: 24px;
+  color: #ffffff;
+  max-width: 400px;
+}
+
+.hero_images {
+  display: flex;
+  gap: 24px;
+  align-items: start;
+}
+
+.hero_image {
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.hero_main_image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
