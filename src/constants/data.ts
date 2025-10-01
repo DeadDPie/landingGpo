@@ -70,3 +70,36 @@ export const data: Cake[] = [
     price: 1459,
   },
 ];
+
+export const heroData = {
+  title: "Вкусные торты на заказ!",
+  description:
+    "Авторские торты, капкейки и пирожные с индивидуальным дизайном и неповторимым вкусом для ваших праздников",
+  smallImage: "/images/hero1.png",
+  mainImage: "/images/2.png",
+};
+
+export const aboutData = {
+  title: "Обо мне",
+  description:
+    `Привет! Меня зовут [Имя]. С детства обожаю превращать простые ингредиенты 
+    в настоящие произведения искусства. Для меня кондитерское дело — это не просто работа, 
+    а способ делиться радостью и создавать неповторимую атмосферу вашего праздника. 
+    Я использую только натуральные продукты и вкладываю душу в каждый десерт.`,
+  image: "/images/conditer.png",
+};
+
+export const socialLinks = [
+  {
+    id: "vk",
+    href: "https://vk.com",
+    iconHeader: "/icons/vk_header.svg",
+    iconFooter: "/icons/vk_footer.svg",
+  },
+  {
+    id: "telegram",
+    href: "https://t.me",
+    iconHeader: "/icons/telegram_header.svg",
+    iconFooter: "/icons/telegram_footer.svg",
+  },
+];

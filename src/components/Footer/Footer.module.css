@@ -1,7 +1,6 @@
-.header {
-  padding: 1rem 0;
-  background-color: var(--color-background);
-  height: 120px;
+.footer {
+  padding: 16px 0;
+  background-color: var(--color-blocks);;
   display: flex;
   align-items: center;
 }
@@ -22,16 +21,10 @@
 }
 
 .link {
-  color: var(--color-text-main);
+  color: var(--color-text-white);
   cursor: pointer;
-  transition: color 0.2s ease;
   text-decoration: none;
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
+  transition: color 0.2s ease;
 }
 
 .social_icons {
@@ -40,15 +33,7 @@
   align-items: center;
 }
 
-.cart_link {
-  display: flex;
-  align-items: center;
-}
-
 .icon {
   display: block;
-}
-
-.social_icon {
   transition: transform 0.2s ease;
 }
