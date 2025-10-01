@@ -1,0 +1,87 @@
+.card {
+  border: 2px solid var(--color-border-main);
+  border-radius: 25px;
+  padding: 16px 16px 24px 16px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+}
+
+.image {
+  max-width: 326px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: 25% 75%;
+}
+
+.title {
+  margin: 16px 0 8px;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.description {
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.price {
+  text-decoration: underline;
+}
+
+.bottom_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #3a2a27; /* тёмный фон как на скриншоте */
+  padding: 24px;
+  border-radius: 16px;
+  min-width: 280px;
+}
+
+.modal_title {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.modal_select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.modal_btn {
+  background-color: #b92b2b;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal_btn:hover {
+  background-color: #a02121;
+}
+
+.modal_count {
+  background-color: white;
+  padding: 4px;
+  border-radius: 12px;
+}
