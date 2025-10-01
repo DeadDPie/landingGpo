@@ -28,10 +28,6 @@
   text-decoration: none;
 }
 
-.link:hover {
-  color: var(--color-primary);
-}
-
 .icons {
   display: flex;
   align-items: center;

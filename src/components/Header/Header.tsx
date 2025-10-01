@@ -34,7 +34,7 @@ export default function Header() {
           <a href="#cart" className={styles.cart_link}>
             <Image 
               src="/icons/cart.svg" 
-              alt="Корзина" 
+              alt="cart" 
               width={49}
               height={48}
               className={styles.icon}
@@ -45,7 +45,7 @@ export default function Header() {
             <a href="https://vk.com" target="_blank">
               <Image 
                 src="/icons/vk_header.svg" 
-                alt="ВКонтакте" 
+                alt="VK" 
                 width={64}
                 height={64}
                 className={`${styles.icon} ${styles.social_icon}`}
@@ -55,7 +55,7 @@ export default function Header() {
             <a href="https://t.me" target="_blank">
               <Image 
                 src="/icons/telegram_header.svg" 
-                alt="Телеграм" 
+                alt="telegram" 
                 width={64}
                 height={64}
                 className={`${styles.icon} ${styles.social_icon}`}

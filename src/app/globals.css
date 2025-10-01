@@ -9,8 +9,10 @@
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   --color-text-main: #372825;
+  --color-text-white: #ffffff;
   --color-border-main: #372825;
   --color-background: #ffffff;
+  --color-blocks: #a0231f;
 }
 
 html,
@@ -23,7 +25,7 @@ body {
 body {
   font-family: var(--font-family-mont);
   color: var(--color-text-main);
-  background-color: var(--color-bg);
+  background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

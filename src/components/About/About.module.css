@@ -1,0 +1,52 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  margin-top: 64px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.text_block {
+  background-color: var(--color-blocks);
+  border-radius: 25px;
+  padding: 32px 48px;
+  height: 552px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 64px;
+  color: var(--color-text-white);
+}
+
+.description {
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: var(--color-text-white);
+}
+
+.image_block {
+  width: 458px;
+  height: 552px;
+  flex-shrink: 0;
+}
+
+.image {
+  border-radius: 25px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

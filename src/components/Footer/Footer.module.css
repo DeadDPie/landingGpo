@@ -1,11 +1,11 @@
 .footer {
   padding: 16px 0;
-  background-color: #a0231f;
+  background-color: var(--color-blocks);;
   display: flex;
   align-items: center;
 }
 
-.footer_container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -15,25 +15,25 @@
   width: 100%;
 }
 
-.footer_nav {
+.nav {
   display: flex;
   gap: 9rem;
 }
 
-.footer_link {
-  color: #ffffff;
+.link {
+  color: var(--color-text-white);
   cursor: pointer;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.footer_social_icons {
+.social_icons {
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
 
-.footer_icon {
+.icon {
   display: block;
   transition: transform 0.2s ease;
 }

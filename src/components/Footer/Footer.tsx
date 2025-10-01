@@ -5,39 +5,39 @@ import styles from "./Footer.module.css";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer_container}>
-        <nav className={styles.footer_nav}>
+      <div className={styles.container}>
+        <nav className={styles.nav}>
           <Typography 
             variant="h3" 
             as="a" 
             href="#catalog" 
-            className={styles.footer_link}>
+            className={styles.link}>
             Каталог
           </Typography>
           <Typography 
             variant="h3" 
             as="a" 
             href="#about" 
-            className={styles.footer_link}>
+            className={styles.link}>
             Обо мне
           </Typography>
           <Typography 
             variant="h3" 
             as="a" 
             href="#reviews" 
-            className={styles.footer_link}>
+            className={styles.link}>
             Отзывы
           </Typography>
         </nav>
 
-        <div className={styles.footer_social_icons}>
+        <div className={styles.social_icons}>
           <a href="https://vk.com" target="_blank">
             <Image 
               src="/icons/vk_footer.svg" 
               alt="VK" 
               width={64} 
               height={64} 
-              className={styles.footer_icon}
+              className={styles.icon}
             />
           </a>
 
@@ -47,7 +47,7 @@ export default function Footer() {
               alt="telegram" 
               width={64} 
               height={64} 
-              className={styles.footer_icon}
+              className={styles.icon}
             />
           </a>
         </div>
