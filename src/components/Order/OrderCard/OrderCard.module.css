@@ -1,0 +1,31 @@
+.card {
+  border: 2px solid var(--color-border-main);
+  border-radius: 25px;
+  padding: 16px 16px 24px 16px;
+  max-height: 265px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+  gap: 25px;
+}
+
+.image_wrapper {
+  position: relative;
+  width: 326px;
+  height: 216px;
+  flex: 0 0 326px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  object-position: 25% 75%;
+}
+
+.card_head_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
