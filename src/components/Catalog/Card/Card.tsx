@@ -64,13 +64,13 @@ export default function Card({ cake }: CardProps) {
         <Modal onClose={() => setIsModalOpen(false)}>
           <div className={styles.modal_content}>
             <h3 className={styles.modal_title}>Выбери начинку и вес!</h3>
-            <div className={styles.modal_count}>
-              <CountButton
-                count={count}
-                setCount={setCount}
-                onAddClick={() => {}}
-              />
-            </div>
+
+            <select className={styles.modal_select}>
+              <option value="">Выбрать килограммы</option>
+              <option value="chocolate">1</option>
+              <option value="strawberry">2</option>
+              <option value="vanilla">3</option>
+            </select>
 
             <select className={styles.modal_select}>
               <option value="">Выбрать начинку</option>
