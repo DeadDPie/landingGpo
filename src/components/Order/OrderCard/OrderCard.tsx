@@ -7,6 +7,7 @@ import { useCountButton } from "@/components/CountButton/hooks/useCountButton";
 import CountButton from "@/components/CountButton/CountButton";
 import Modal from "@/components/Modal/Modal";
 import ModalContent from "@/components/ModalContent/ModalContent";
+import { IconTrash } from "@tabler/icons-react";
 
 interface CardProps {
   cake: Cake;
@@ -35,18 +36,21 @@ export default function OrderCard({ cake }: CardProps) {
         />
       </div>
 
-      <div>
+      <div className={styles.wrapper}>
         <div className={styles.card_head_container}>
           <div className={styles.title}>
             <Typography variant="h2" as="h3">
               {cake.title}
             </Typography>
           </div>
-          <CountButton
-            count={count}
-            setCount={setCount}
-            onAddClick={handleAddClick}
-          />
+          <div>
+            {" "}
+            <CountButton
+              count={count}
+              setCount={setCount}
+              onAddClick={handleAddClick}
+            />
+          </div>
         </div>
 
         <div className={styles.description}>
@@ -59,6 +63,9 @@ export default function OrderCard({ cake }: CardProps) {
           <Typography variant="h2" as="p">
             {cake.price} р/кг.
           </Typography>
+        </div>
+        <div className={styles.card_foot_container}>
+          <IconTrash />
         </div>
       </div>
 

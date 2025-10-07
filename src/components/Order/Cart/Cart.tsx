@@ -31,6 +31,9 @@ export default function Cart() {
           <OrderCard key={cake.id} cake={cake} />
         ))}
       </div>
+      <Typography variant="h3" as="p">
+        Общая сумма заказа : 5720 р.
+      </Typography>
     </article>
   );
 }
