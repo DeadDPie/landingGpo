@@ -76,7 +76,7 @@ export const heroData = {
   description:
     "Авторские торты, капкейки и пирожные с индивидуальным дизайном и неповторимым вкусом для ваших праздников",
   smallImage: "/images/hero1.png",
-  mainImage: "/images/2.png",
+  mainImage: "/images/hero2.png",
 };
 
 export const aboutData = {

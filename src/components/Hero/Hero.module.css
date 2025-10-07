@@ -2,6 +2,7 @@
   background-color: var(--color-blocks);
   padding: 32px;
   color: var(--color-text-white);
+  margin-bottom: 4rem;
 }
 
 .container {

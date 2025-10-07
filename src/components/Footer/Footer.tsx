@@ -1,6 +1,6 @@
-import { socialLinks } from "@/constants/data";
-import Image from "next/image";
+import {socialLinks} from "@/constants/data";
 import Typography from "@/ui/Typography/Typography";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
