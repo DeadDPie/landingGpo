@@ -1,27 +1,16 @@
+"use client";
 import Typography from "@/ui/Typography/Typography";
 import styles from "./Cart.module.css";
 import OrderCard from "../OrderCard/OrderCard";
-const currentItems = [
-  {
-    id: "1",
-    image: "/images/cake.png",
-    title: "Брусничка1",
-    description:
-      "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
-    price: 1250,
-    hasOptions: true,
-  },
-  {
-    id: "2",
-    image: "/images/cake.png",
-    title: "Торт 2",
-    description: "Шоколадный бисквит с кремом",
-    price: 1399,
-  },
-];
+import { useCart } from "@/context/CartContext";
 
 export default function Cart() {
-  const totalPrice = currentItems.reduce((sum, item) => sum + item.price, 0);
+  const { items } = useCart();
+
+  const totalPrice = items.reduce(
+    (sum, item) => sum + item.cake.price * item.count,
+    0
+  );
 
   return (
     <article className={styles.wrapper}>
@@ -29,8 +18,11 @@ export default function Cart() {
         Корзина
       </Typography>
       <div className={styles.list}>
-        {currentItems.map((cake) => (
-          <OrderCard key={cake.id} cake={cake} />
+        {items.map((item) => (
+          <OrderCard
+            key={item.cake.id + (item.weight || "") + (item.filling || "")}
+            item={item}
+          />
         ))}
       </div>
       <div className={styles.footer}>

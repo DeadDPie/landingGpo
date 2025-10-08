@@ -1,27 +1,16 @@
-"use client";
 import Typography from "@/ui/Typography/Typography";
 import styles from "./OrderCard.module.css";
 import Image from "next/image";
-import { Cake } from "@/types/catalog";
-import { useCountButton } from "@/components/CountButton/hooks/useCountButton";
-import CountButton from "@/components/CountButton/CountButton";
-import Modal from "@/components/Modal/Modal";
-import ModalContent from "@/components/ModalContent/ModalContent";
+import { CartItem, useCart } from "@/context/CartContext";
 import { IconTrash } from "@tabler/icons-react";
 
-interface CardProps {
-  cake: Cake;
+interface OrderCardProps {
+  item: CartItem;
 }
 
-export default function OrderCard({ cake }: CardProps) {
-  const {
-    count,
-    setCount,
-    isModalOpen,
-    setIsModalOpen,
-    addToCart,
-    handleAddClick,
-  } = useCountButton(cake);
+export default function OrderCard({ item }: OrderCardProps) {
+  const { cake, count, weight, filling } = item;
+  const { removeItem } = useCart();
 
   return (
     <article className={styles.card}>
@@ -45,11 +34,14 @@ export default function OrderCard({ cake }: CardProps) {
           </div>
           <div>
             {" "}
-            <CountButton
-              count={count}
-              setCount={setCount}
-              onAddClick={handleAddClick}
-            />
+            <Typography as="p">Количество: {count}</Typography>{" "}
+            <div className={styles.price}>
+              <Typography variant="h2" as="p">
+                {weight
+                  ? `${cake.price * weight * count} р.`
+                  : `${cake.price * count} р.`}{" "}
+              </Typography>
+            </div>
           </div>
         </div>
 
@@ -57,23 +49,16 @@ export default function OrderCard({ cake }: CardProps) {
           <Typography variant="p1" as="p">
             {cake.description}
           </Typography>
-        </div>
-
-        <div className={styles.price}>
-          <Typography variant="h2" as="p">
-            {cake.price} р/кг.
+          <Typography variant="p1" as="p">
+            {weight && <span> {weight} кг</span>}
+            {filling && <span> {filling}</span>}
           </Typography>
         </div>
+
         <div className={styles.card_foot_container}>
-          <IconTrash />
+          <IconTrash onClick={() => removeItem(cake.id)} />
         </div>
       </div>
-
-      {isModalOpen && (
-        <Modal onClose={() => setIsModalOpen(false)}>
-          <ModalContent addToCart={addToCart} setIsModalOpen={setIsModalOpen} />
-        </Modal>
-      )}
     </article>
   );
 }

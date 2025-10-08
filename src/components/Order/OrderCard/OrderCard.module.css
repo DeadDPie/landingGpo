@@ -33,10 +33,16 @@
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
+  margin-bottom: 16px;
 }
 
 .card_foot_container {
   position: absolute;
   bottom: 0;
   right: 0;
+  cursor: pointer;
+}
+.price {
+  justify-self: flex-end;
+  margin-bottom: auto;
 }
