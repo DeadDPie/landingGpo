@@ -5,9 +5,9 @@
   max-height: 265px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 32px;
   gap: 25px;
 }
+
 .wrapper {
   width: 100%;
   height: auto;

@@ -11,3 +11,15 @@
   font-weight: 400;
   margin-bottom: 30px;
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 24px;
+  align-self: flex-end;
+}

@@ -21,19 +21,23 @@ const currentItems = [
 ];
 
 export default function Cart() {
+  const totalPrice = currentItems.reduce((sum, item) => sum + item.price, 0);
+
   return (
     <article className={styles.wrapper}>
       <Typography variant="h1" as="p" className={styles.title}>
         Корзина
       </Typography>
-      <div className={styles.container}>
+      <div className={styles.list}>
         {currentItems.map((cake) => (
           <OrderCard key={cake.id} cake={cake} />
         ))}
       </div>
-      <Typography variant="h3" as="p">
-        Общая сумма заказа : 5720 р.
-      </Typography>
+      <div className={styles.footer}>
+        <Typography variant="h3" as="p">
+          Общая сумма заказа: {totalPrice} р.
+        </Typography>
+      </div>
     </article>
   );
 }
