@@ -24,7 +24,7 @@ export default function Catalog() {
 
   return (
     <section className={styles.wrapper} id="catalog">
-      <Typography variant="h1" as="h1" className={styles.title}>
+      <Typography variant="h1" as="p" className={styles.title}>
         Каталог
       </Typography>
 
