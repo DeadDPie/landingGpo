@@ -4,7 +4,7 @@ export const data: Cake[] = [
   {
     id: "1",
     image: "/images/cake.png",
-    title: "Брусничка",
+    title: "Брусничка1",
     description:
       "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
     price: 1250,
@@ -26,48 +26,87 @@ export const data: Cake[] = [
     hasOptions: true,
   },
   {
-    id: "1",
+    id: "11",
     image: "/images/cake.png",
-    title: "Брусничка",
+    title: "Брусничка 4",
     description:
       "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
     price: 1250,
   },
   {
-    id: "2",
+    id: "12",
     image: "/images/cake.png",
-    title: "Торт 2",
+    title: "Торт 5",
     description: "Шоколадный бисквит с кремом",
     price: 1399,
   },
   {
-    id: "3",
+    id: "13",
     image: "/images/cake.png",
-    title: "Торт 3",
+    title: "Торт 6",
     description: "Нежный чизкейк с ягодами",
     price: 1459,
   },
   {
-    id: "1",
+    id: "21",
     image: "/images/cake.png",
-    title: "Брусничка",
+    title: "Брусничка 7",
     description:
       "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
     price: 1250,
   },
   {
-    id: "2",
+    id: "22",
     image: "/images/cake.png",
-    title: "Торт 2",
+    title: "Торт 8",
     description: "Шоколадный бисквит с кремом",
     price: 1399,
   },
   {
-    id: "3",
+    id: "123",
     image: "/images/cake.png",
-    title: "Торт 3",
+    title: "Торт 9",
     description: "Нежный чизкейк с ягодами",
     price: 1459,
+  },
+  {
+    id: "113",
+    image: "/images/cake.png",
+    title: "Торт 10",
+    description: "Нежный чизкейк с ягодами",
+    price: 1459,
+    hasOptions: true,
+  },
+  {
+    id: "111",
+    image: "/images/cake.png",
+    title: "Брусничка 11",
+    description:
+      "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
+    price: 1250,
+  },
+  {
+    id: "112",
+    image: "/images/cake.png",
+    title: "Торт 12",
+    description: "Шоколадный бисквит с кремом",
+    price: 1399,
+  },
+  {
+    id: "113",
+    image: "/images/cake.png",
+    title: "Торт 13",
+    description: "Нежный чизкейк с ягодами",
+    price: 1459,
+    hasOptions: true,
+  },
+  {
+    id: "111",
+    image: "/images/cake.png",
+    title: "Брусничка 14",
+    description:
+      "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
+    price: 1250,
   },
 ];
 
@@ -81,8 +120,7 @@ export const heroData = {
 
 export const aboutData = {
   title: "Обо мне",
-  description:
-    `Привет! Меня зовут [Имя]. С детства обожаю превращать простые ингредиенты 
+  description: `Привет! Меня зовут [Имя]. С детства обожаю превращать простые ингредиенты 
     в настоящие произведения искусства. Для меня кондитерское дело — это не просто работа, 
     а способ делиться радостью и создавать неповторимую атмосферу вашего праздника. 
     Я использую только натуральные продукты и вкладываю душу в каждый десерт.`,
