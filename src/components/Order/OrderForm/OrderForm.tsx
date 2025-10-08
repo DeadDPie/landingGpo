@@ -144,6 +144,10 @@ export default function OrderForm() {
           Заказать
         </Typography>
       </button>
+      <Typography variant="p2">
+        Нажимая кнопку “Заказать” вы автоматически соглашаетесь с политикой
+        конфиденциальности и обработки личных данных.
+      </Typography>
     </form>
   );
 }
