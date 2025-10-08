@@ -34,9 +34,9 @@ export default function ModalContent({
         onChange={(e) => setFilling(e.target.value)}
       >
         <option value="">Выбрать начинку</option>
-        <option value="chocolate">Шоколад</option>
-        <option value="strawberry">Клубника</option>
-        <option value="vanilla">Ваниль</option>
+        <option value="Шоколад">Шоколад</option>
+        <option value="Клубника">Клубника</option>
+        <option value="Ваниль">Ваниль</option>
       </select>
 
       <button
