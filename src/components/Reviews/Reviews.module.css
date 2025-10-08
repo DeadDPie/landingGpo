@@ -35,10 +35,12 @@
   color: var(--color-text-white);
   margin-bottom: 4rem;
   text-align: left;
-
-  min-height: 120px;
-  max-height: 120px;
-  overflow-y: auto;
+   display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 
 }
 
