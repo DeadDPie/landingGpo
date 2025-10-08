@@ -1,4 +1,4 @@
-import { socialLinks } from "@/constants/data";
+import {socialLinks} from "@/constants/data";
 import Image from "next/image";
 import Typography from "@/ui/Typography/Typography";
 import styles from "./Header.module.css";
@@ -23,7 +23,7 @@ export default function Header() {
           <a href="#cart" className={styles.cart_link}>
             <Image
               src="/icons/cart.svg"
-              alt="Корзина"
+              alt="cart"
               width={49}
               height={48}
               className={styles.icon}
