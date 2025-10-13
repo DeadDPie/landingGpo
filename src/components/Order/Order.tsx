@@ -6,7 +6,7 @@ import OrderForm from "./OrderForm/OrderForm";
 export default function Order() {
   return (
     <section className={styles.wrapper} id="order">
-      <Typography variant="h1" as="p">
+      <Typography className={styles.title} variant="h1" as="p">
         Оформить заказ
       </Typography>
       <Cart />

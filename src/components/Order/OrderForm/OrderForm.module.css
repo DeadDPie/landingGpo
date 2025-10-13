@@ -118,3 +118,42 @@
   margin-top: -20px;
   margin-bottom: 8px;
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    gap: 28px;
+  }
+
+  .input {
+    font-size: 28px;
+    min-height: 70px;
+  }
+
+  .order_btn {
+    max-width: 300px;
+    padding: 16px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    gap: 20px;
+    padding: 0 12px;
+  }
+
+  .input {
+    font-size: 20px;
+    min-height: 56px;
+    padding: 12px;
+  }
+
+  .order_btn {
+    max-width: 100%;
+    border-radius: 25px;
+    padding: 12px 20px;
+  }
+
+  .order_btn_text {
+    font-size: 24px;
+  }
+}

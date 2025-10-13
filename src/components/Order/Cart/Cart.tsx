@@ -25,11 +25,9 @@ export default function Cart() {
           />
         ))}
       </div>
-      <div className={styles.footer}>
-        <Typography variant="h3" as="p">
-          Общая сумма заказа: {totalPrice} р.
-        </Typography>
-      </div>
+      <Typography className={styles.footer} variant="h3" as="p">
+        Общая сумма заказа: {totalPrice} р.
+      </Typography>
     </article>
   );
 }
