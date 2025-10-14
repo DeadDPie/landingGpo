@@ -8,3 +8,27 @@
   align-items: center;
   margin-bottom: 30px;
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    gap: 18px;
+    align-items: center;
+  }
+  .title {
+    font-size: 38px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    gap: 16px;
+    padding: 0 12px;
+    align-items: center;
+    font-size: 32px;
+  }
+  .title {
+    text-align: center;
+    font-size: 32px;
+  }
+}
