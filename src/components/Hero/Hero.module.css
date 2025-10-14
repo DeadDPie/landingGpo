@@ -49,3 +49,14 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+.orderButton {
+  background: var(--color-background);
+  border: none;
+  border-radius: 35px;
+  padding: 20px 40px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 2rem;
+}
+

@@ -1,9 +1,14 @@
+"use client";
 import Typography from "@/ui/Typography/Typography";
-import {heroData} from "@/constants/data";
+import { heroData } from "@/constants/data";
 import Image from "next/image";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
+  const scrollToCatalog = () => {
+    document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -20,9 +25,16 @@ export default function Hero() {
               height={288}
               className={styles.image}
             />
-            <Typography variant="p1" as="p" className={styles.description}>
-              {heroData.description}
-            </Typography>
+            <div className={styles.textContainer}>
+              <Typography variant="p1" as="p" className={styles.description}>
+                {heroData.description}
+              </Typography>
+              <button className={styles.orderButton} onClick={scrollToCatalog}>
+                <Typography variant="h2" as="span">
+                  Заказать
+                </Typography>
+              </button>
+            </div>
           </div>
         </div>
         <div className={styles.main_image}>
