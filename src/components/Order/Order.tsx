@@ -1,14 +1,16 @@
 import Typography from "@/ui/Typography/Typography";
 import styles from "./Order.module.css";
+import Cart from "./Cart/Cart";
+import OrderForm from "./OrderForm/OrderForm";
 
 export default function Order() {
   return (
     <section className={styles.wrapper} id="order">
-      <button className={styles.order_btn}>
-        <Typography as="p" variant="h1" className={styles.order_btn_text}>
-          Заказать
-        </Typography>
-      </button>
+      <Typography className={styles.title} variant="h1" as="p">
+        Оформить заказ
+      </Typography>
+      <Cart />
+      <OrderForm />
     </section>
   );
 }

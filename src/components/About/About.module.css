@@ -50,3 +50,73 @@
   width: 100%;
   height: 100%;
 }
+
+/* Медиазапрос для 1024px: текст и картинка рядом, но меньше */
+@media (max-width: 1024px) {
+  .container {
+    gap: 32px; /* Уменьшаем отступ между текстом и картинкой */
+  }
+
+  .text_block {
+    padding: 24px 32px;
+    height: 400px; /* Уменьшаем высоту текстового блока */
+    min-width: 250px; /* Уменьшаем минимальную ширину */
+  }
+
+  .title {
+    font-size: 48px; /* Уменьшаем шрифт заголовка */
+  }
+
+  .description {
+    font-size: 18px; /* Уменьшаем шрифт описания */
+  }
+
+  .image_block {
+    width: 320px; /* Уменьшаем ширину картинки */
+    height: 400px; /* Уменьшаем высоту, сохраняя пропорции (458/552 ≈ 0.83) */
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохраняем пропорции вертикальной картинки */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .text_block {
+    height: auto;
+    padding: 20px 24px;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .image_block {
+    width: 100%;
+    max-width: 300px; /* Ограничиваем ширину, чтобы картинка не растягивалась */
+    aspect-ratio: 458 / 552; /* Фиксируем пропорции (вертикальная картинка) */
+    height: auto; /* Высота подстраивается под пропорции */
+    margin: 0 auto; /* Центрируем картинку */
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    max-height: 360px; /* Ограничиваем высоту, чтобы картинка не была слишком большой */
+    object-fit: contain; /* Показываем картинку целиком, без обрезки */
+    border-radius: 25px;
+  }
+}

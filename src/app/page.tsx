@@ -12,7 +12,10 @@ export default function Home() {
       <main>
         <Header />
         <Hero/>
+        <Catalog/>
+        <About/>
         <Reviews/>
+        <Order/>
         <Footer/>
       </main>
     </div>

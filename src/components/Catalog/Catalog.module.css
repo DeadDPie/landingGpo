@@ -3,6 +3,7 @@
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 4rem;
   padding: 0 16px;
 }
 
@@ -17,4 +18,26 @@
 .title {
   margin-bottom: 32px;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    align-items: center;
+  }
+  .title {
+    font-size: 38px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 12px;
+    align-items: center;
+    font-size: 32px;
+  }
+  .title {
+    text-align: center;
+    font-size: 32px;
+  }
 }

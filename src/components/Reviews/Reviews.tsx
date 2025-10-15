@@ -30,7 +30,6 @@ export default function Reviews() {
             {title}
           </Typography>
 
-          {/* Обёртка — фиксирует высоту и центрирует по вертикали */}
           <div className={styles.textWrapper}>
             <Typography variant="p1" as="p" className={styles.text}>
               {currentReview.text}
