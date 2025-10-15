@@ -18,7 +18,7 @@ export default function Footer() {
             Отзывы
           </Typography>
         </nav>
-
+        
         <div className={styles.social_icons}>
           {socialLinks.map((social) => (
             <a key={social.id} href={social.href} target="_blank">

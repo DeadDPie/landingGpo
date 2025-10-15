@@ -11,11 +11,8 @@ export default function Home() {
     <div>
       <main>
         <Header />
-        <Hero />
-        <Catalog />
-        <About/>
+        <Hero/>
         <Reviews/>
-        <Order />
         <Footer/>
       </main>
     </div>

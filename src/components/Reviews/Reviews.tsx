@@ -24,16 +24,19 @@ export default function Reviews() {
         <button className={styles.arrow} onClick={prevReview}>
           <IconChevronLeft size={90} />
         </button>
-        
+
         <div className={styles.content}>
           <Typography variant="h1" as="h2" className={styles.title}>
             {title}
           </Typography>
-          
-          <Typography variant="p1" as="p" className={styles.text}>
-            {currentReview.text}
-          </Typography>
-          
+
+          {/* Обёртка — фиксирует высоту и центрирует по вертикали */}
+          <div className={styles.textWrapper}>
+            <Typography variant="p1" as="p" className={styles.text}>
+              {currentReview.text}
+            </Typography>
+          </div>
+
           <div className={styles.author}>
             <Typography variant="h2" as="h3" className={styles.author_name}>
               {currentReview.author}
@@ -43,7 +46,7 @@ export default function Reviews() {
             </Typography>
           </div>
         </div>
-        
+
         <button className={styles.arrow} onClick={nextReview}>
           <IconChevronRight size={90} />
         </button>
