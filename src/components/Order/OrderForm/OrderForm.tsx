@@ -81,7 +81,7 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
         placeholder="Имя"
         className={cn(styles.input, {
           [styles.inputError]: errors.name,
-          [styles.inputB]: design === "B",
+          [styles.input_b]: design === "B",
         })}
       />
       {errors.name && <p className={styles.error_text}>{errors.name}</p>}
@@ -94,7 +94,7 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
         placeholder="Телефон"
         className={cn(styles.input, {
           [styles.inputError]: errors.phone,
-          [styles.inputB]: design === "B",
+          [styles.input_b]: design === "B",
         })}
       />
       {errors.phone && <p className={styles.error_text}>{errors.phone}</p>}
@@ -106,7 +106,7 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
         type="date"
         className={cn(styles.input, styles.date, {
           [styles.inputError]: errors.date,
-          [styles.inputB]: design === "B",
+          [styles.input_b]: design === "B",
         })}
       />
       {errors.date && <p className={styles.error_text}>{errors.date}</p>}
@@ -118,7 +118,7 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
           onChange={handleChange}
           placeholder="Пожелания"
           className={cn(styles.input, styles.textarea, {
-            [styles.inputB]: design === "B",
+            [styles.input_b]: design === "B",
           })}
         />
         <IconPaperclip
@@ -149,7 +149,12 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
         </div>
       )}
 
-      <button type="submit" className={styles.order_btn}>
+      <button
+        type="submit"
+        className={cn(styles.order_btn, {
+          [styles.order_btn_b]: design === "B",
+        })}
+      >
         <Typography as="p" variant="h1" className={styles.order_btn_text}>
           Заказать
         </Typography>

@@ -7,7 +7,7 @@
 :root {
   --font-family-mont: "Montserrat Alternates", system-ui, -apple-system,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
+  --font-family-b: "Roboto Mono", monospace;
   --color-text-main: #372825;
   --color-text-white: #ffffff;
   --color-border-main: #372825;

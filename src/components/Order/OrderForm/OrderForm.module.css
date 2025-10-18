@@ -166,8 +166,16 @@
 }
 
 /* design B*/
-.inputB {
+
+.input_b {
   border-radius: 0;
-  font-family: var(--font-family-alt, var(--font-family-mont));
-  font-size: 38px;
+  font-family: var(--font-family-b);
+  font-size: 20px;
+  font-weight: 300;
+  min-height: 60px;
+  max-width: 380px;
+}
+
+.order_btn_b {
+  border-radius: 0;
 }
