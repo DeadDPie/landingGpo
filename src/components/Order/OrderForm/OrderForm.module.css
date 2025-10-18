@@ -39,6 +39,10 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.inputError {
+  border-color: var(--color-error);
+}
+
 .input:focus {
   outline: none;
   border-color: var(--color-border-main);
@@ -133,6 +137,9 @@
     max-width: 300px;
     padding: 16px 40px;
   }
+  .order_btn_text {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -156,4 +163,11 @@
   .order_btn_text {
     font-size: 24px;
   }
+}
+
+/* design B*/
+.inputB {
+  border-radius: 0;
+  font-family: var(--font-family-alt, var(--font-family-mont));
+  font-size: 38px;
 }

@@ -3,8 +3,9 @@ import Typography from "@/ui/Typography/Typography";
 import styles from "./OrderForm.module.css";
 import { useState, useRef } from "react";
 import { IconPaperclip } from "@tabler/icons-react";
+import cn from "classnames";
 
-export default function OrderForm() {
+export default function OrderForm({ design }: { design?: "A" | "B" }) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -78,7 +79,10 @@ export default function OrderForm() {
         onChange={handleChange}
         type="text"
         placeholder="Имя"
-        className={`${styles.input} ${errors.name ? styles.error : ""}`}
+        className={cn(styles.input, {
+          [styles.inputError]: errors.name,
+          [styles.inputB]: design === "B",
+        })}
       />
       {errors.name && <p className={styles.error_text}>{errors.name}</p>}
 
@@ -88,7 +92,10 @@ export default function OrderForm() {
         onChange={handleChange}
         type="tel"
         placeholder="Телефон"
-        className={`${styles.input} ${errors.phone ? styles.error : ""}`}
+        className={cn(styles.input, {
+          [styles.inputError]: errors.phone,
+          [styles.inputB]: design === "B",
+        })}
       />
       {errors.phone && <p className={styles.error_text}>{errors.phone}</p>}
 
@@ -97,9 +104,10 @@ export default function OrderForm() {
         value={formData.date}
         onChange={handleChange}
         type="date"
-        className={`${styles.input} ${styles.date} ${
-          errors.date ? styles.error : ""
-        }`}
+        className={cn(styles.input, styles.date, {
+          [styles.inputError]: errors.date,
+          [styles.inputB]: design === "B",
+        })}
       />
       {errors.date && <p className={styles.error_text}>{errors.date}</p>}
 
@@ -109,7 +117,9 @@ export default function OrderForm() {
           value={formData.requests}
           onChange={handleChange}
           placeholder="Пожелания"
-          className={`${styles.input} ${styles.textarea}`}
+          className={cn(styles.input, styles.textarea, {
+            [styles.inputB]: design === "B",
+          })}
         />
         <IconPaperclip
           size={24}
@@ -144,8 +154,9 @@ export default function OrderForm() {
           Заказать
         </Typography>
       </button>
-      <Typography variant="p2">
-        Нажимая кнопку “Заказать” вы автоматически соглашаетесь с политикой
+
+      <Typography variant="p2" className={styles.privacy}>
+        Нажимая кнопку “Заказать”, вы соглашаетесь с политикой
         конфиденциальности и обработки личных данных.
       </Typography>
     </form>
