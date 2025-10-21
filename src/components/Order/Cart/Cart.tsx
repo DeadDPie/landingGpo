@@ -44,9 +44,11 @@ export default function Cart() {
           />
         ))}
       </div>
-      <Typography className={styles.footer} variant="h3" as="p">
-        Общая сумма заказа: {totalPrice} р.
-      </Typography>
+      {items.length !== 0 && (
+        <Typography className={styles.footer} variant="h3" as="p">
+          Общая сумма заказа: {totalPrice} р.
+        </Typography>
+      )}
     </article>
   );
 }
