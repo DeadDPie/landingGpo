@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 import { IconPaperclip } from "@tabler/icons-react";
 import cn from "classnames";
 
-export default function OrderForm() {
+export default function () {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",

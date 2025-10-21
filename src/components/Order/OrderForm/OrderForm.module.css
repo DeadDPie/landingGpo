@@ -166,9 +166,16 @@ html[data-theme="B"] .input {
   font-size: 20px;
   font-weight: 300;
   min-height: 60px;
-  max-width: 380px;
+  border-width: 1px;
 }
 
 html[data-theme="B"] .order_btn {
   border-radius: 0;
+  padding: 16px 24px;
+  width: 100%;
+  max-width: 100%;
+}
+
+html[data-theme="B"] .wrapper {
+  align-items: stretch;
 }
