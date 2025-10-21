@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 import { IconPaperclip } from "@tabler/icons-react";
 import cn from "classnames";
 
-export default function OrderForm({ design }: { design?: "A" | "B" }) {
+export default function OrderForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -22,7 +22,7 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     if (errors[e.target.name]) {
-      setErrors({ ...errors, [e.target.name]: "" });
+      setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
     }
   };
 
@@ -79,12 +79,15 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
         onChange={handleChange}
         type="text"
         placeholder="Имя"
-        className={cn(styles.input, {
-          [styles.inputError]: errors.name,
-          [styles.input_b]: design === "B",
-        })}
+        aria-invalid={!!errors.name}
+        aria-describedby={errors.name ? "error-name" : undefined}
+        className={cn(styles.input, { [styles.inputError]: errors.name })}
       />
-      {errors.name && <p className={styles.error_text}>{errors.name}</p>}
+      {errors.name && (
+        <p id="error-name" className={styles.error_text}>
+          {errors.name}
+        </p>
+      )}
 
       <input
         name="phone"
@@ -92,24 +95,32 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
         onChange={handleChange}
         type="tel"
         placeholder="Телефон"
-        className={cn(styles.input, {
-          [styles.inputError]: errors.phone,
-          [styles.input_b]: design === "B",
-        })}
+        aria-invalid={!!errors.phone}
+        aria-describedby={errors.phone ? "error-phone" : undefined}
+        className={cn(styles.input, { [styles.inputError]: errors.phone })}
       />
-      {errors.phone && <p className={styles.error_text}>{errors.phone}</p>}
+      {errors.phone && (
+        <p id="error-phone" className={styles.error_text}>
+          {errors.phone}
+        </p>
+      )}
 
       <input
         name="date"
         value={formData.date}
         onChange={handleChange}
         type="date"
+        aria-invalid={!!errors.date}
+        aria-describedby={errors.date ? "error-date" : undefined}
         className={cn(styles.input, styles.date, {
           [styles.inputError]: errors.date,
-          [styles.input_b]: design === "B",
         })}
       />
-      {errors.date && <p className={styles.error_text}>{errors.date}</p>}
+      {errors.date && (
+        <p id="error-date" className={styles.error_text}>
+          {errors.date}
+        </p>
+      )}
 
       <div className={styles.textarea_container}>
         <textarea
@@ -117,14 +128,13 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
           value={formData.requests}
           onChange={handleChange}
           placeholder="Пожелания"
-          className={cn(styles.input, styles.textarea, {
-            [styles.input_b]: design === "B",
-          })}
+          className={cn(styles.input, styles.textarea)}
         />
         <IconPaperclip
           size={24}
           className={styles.paperclip}
           onClick={handleIconClick}
+          aria-label="Прикрепить файл"
         />
         <input
           ref={fileInputRef}
@@ -142,19 +152,14 @@ export default function OrderForm({ design }: { design?: "A" | "B" }) {
             <img
               key={i}
               src={URL.createObjectURL(file)}
-              alt={`preview-${i}`}
+              alt={`Превью ${i + 1}`}
               className={styles.preview_image}
             />
           ))}
         </div>
       )}
 
-      <button
-        type="submit"
-        className={cn(styles.order_btn, {
-          [styles.order_btn_b]: design === "B",
-        })}
-      >
+      <button type="submit" className={styles.order_btn}>
         <Typography as="p" variant="h1" className={styles.order_btn_text}>
           Заказать
         </Typography>

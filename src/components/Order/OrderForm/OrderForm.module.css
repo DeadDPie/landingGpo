@@ -17,7 +17,7 @@
   background-color: var(--color-border-main);
   border: 2px solid var(--color-border-main);
   border-radius: 35px;
-  padding: 20px 60px 20px 60px;
+  padding: 20px 60px;
   cursor: pointer;
 }
 
@@ -51,11 +51,6 @@
 
 .input::placeholder {
   color: var(--color-text-main);
-}
-
-.textarea {
-  min-height: 150px;
-  resize: vertical;
 }
 
 .textarea_container {
@@ -137,6 +132,7 @@
     max-width: 300px;
     padding: 16px 40px;
   }
+
   .order_btn_text {
     font-size: 32px;
   }
@@ -165,17 +161,14 @@
   }
 }
 
-/* design B*/
-
-.input_b {
+html[data-theme="B"] .input {
   border-radius: 0;
-  font-family: var(--font-family-b);
   font-size: 20px;
   font-weight: 300;
   min-height: 60px;
   max-width: 380px;
 }
 
-.order_btn_b {
+html[data-theme="B"] .order_btn {
   border-radius: 0;
 }

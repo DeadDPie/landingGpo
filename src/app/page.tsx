@@ -5,7 +5,6 @@ import Hero from "@/components/Hero/Hero";
 import Footer from "@/components/Footer/Footer";
 import Reviews from "@/components/Reviews/Reviews";
 import About from "@/components/About/About";
-export const CURRENT_THEME: "A" | "B" = "B";
 
 export default function Home() {
   return (
@@ -16,7 +15,7 @@ export default function Home() {
         <Catalog />
         <About />
         <Reviews />
-        <Order design={CURRENT_THEME} />
+        <Order />
         <Footer />
       </main>
     </div>
