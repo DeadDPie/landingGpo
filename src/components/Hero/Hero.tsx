@@ -1,8 +1,8 @@
-"use client";
-import Typography from "@/ui/Typography/Typography";
-import { heroData } from "@/constants/data";
-import Image from "next/image";
-import styles from "./Hero.module.css";
+'use client';
+import Typography from '@/ui/Typography/Typography';
+import { heroData } from '@/constants/data';
+import Image from 'next/image';
+import styles from './Hero.module.css';
 
 export default function Hero() {
   const scrollToCatalog = () => {
@@ -19,27 +19,25 @@ export default function Hero() {
 
           <div className={styles.images}>
             <Image
-              src={heroData.smallImage || "/images/placeholder.png"}
+              src={heroData.smallImage || '/images/placeholder.png'}
               alt="hero small"
               width={239}
               height={288}
               className={styles.image}
             />
-            <div className={styles.textContainer}>
+            <div className={styles.text_container}>
               <Typography variant="p1" as="p" className={styles.description}>
                 {heroData.description}
               </Typography>
-              <button className={styles.orderButton} onClick={scrollToCatalog}>
-                <Typography variant="h2" as="span">
-                  Заказать
-                </Typography>
-              </button>
+              <Typography variant="h2" as="a" href="#catalog" className={styles.order_button}>
+                Заказать
+              </Typography>
             </div>
           </div>
         </div>
         <div className={styles.main_image}>
           <Image
-            src={heroData.mainImage || "/images/placeholder.png"}
+            src={heroData.mainImage || '/images/placeholder.png'}
             alt="hero main"
             width={458}
             height={552}

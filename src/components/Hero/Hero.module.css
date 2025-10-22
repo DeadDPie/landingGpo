@@ -50,7 +50,7 @@
   align-items: center;
 }
 
-.orderButton {
+.order_button {
   background: var(--color-background);
   border: none;
   border-radius: 35px;
@@ -58,44 +58,46 @@
   cursor: pointer;
   width: fit-content;
   margin-top: 1rem;
+  text-decoration: none;
+  display: inline-block;
 }
 
 @media (max-width: 1024px) {
   .hero {
     padding: 24px;
   }
-  
+
   .container {
     gap: 24px;
     max-width: 900px;
   }
-  
+
   .title {
     font-size: 36px;
   }
-  
+
   .description {
     font-size: 18px;
     max-width: 320px;
   }
-  
+
   .images .image {
-    width: 180px; 
+    width: 180px;
     height: 216px;
   }
-  
+
   .main_image .image {
     width: 300px;
     height: 366px;
   }
-  
-  .orderButton {
+
+  .order_button {
     padding: 16px 32px;
     margin-top: 1.5rem;
   }
-  
-  .textContainer {
-    gap: 1rem; 
+
+  .text_container {
+    gap: 1rem;
   }
 }
 
@@ -103,51 +105,57 @@
   .hero {
     padding: 24px 16px;
   }
-  
+
   .container {
     grid-template-columns: 1fr;
     gap: 24px;
     align-items: center;
   }
-  
+
   .content {
     align-items: center;
     text-align: center;
   }
-  
+
   .title {
     font-size: 28px;
     text-align: center;
   }
-  
+
   .description {
     font-size: 16px;
     text-align: center;
     max-width: 100%;
   }
-  
+
+  .images .image {
+    display: none;
+  }
+
   .images {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     gap: 16px;
   }
-  
-  .textContainer {
+
+  .main_image {
+    justify-content: center;
+    display: flex;
+  }
+
+  .main_image .image {
+    width: 250px;
+    height: 308px;
+  }
+
+  .text_container {
     align-items: center;
     gap: 1rem;
   }
-  
-  .main_image {
-    justify-content: center;
-  }
-  
-  .main_image .image {
-    width: 280px;
-    height: 338px;
-  }
-  
-  .orderButton {
+
+  .order_button {
     padding: 14px 28px;
+    width: 100%;
     margin-top: 1rem;
   }
 }

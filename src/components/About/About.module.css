@@ -51,35 +51,34 @@
   height: 100%;
 }
 
-/* Медиазапрос для 1024px: текст и картинка рядом, но меньше */
 @media (max-width: 1024px) {
   .container {
-    gap: 32px; /* Уменьшаем отступ между текстом и картинкой */
+    gap: 32px;
   }
 
   .text_block {
     padding: 24px 32px;
-    height: 400px; /* Уменьшаем высоту текстового блока */
-    min-width: 250px; /* Уменьшаем минимальную ширину */
+    height: 400px;
+    min-width: 250px;
   }
 
   .title {
-    font-size: 48px; /* Уменьшаем шрифт заголовка */
+    font-size: 48px;
   }
 
   .description {
-    font-size: 18px; /* Уменьшаем шрифт описания */
+    font-size: 18px;
   }
 
   .image_block {
-    width: 320px; /* Уменьшаем ширину картинки */
-    height: 400px; /* Уменьшаем высоту, сохраняя пропорции (458/552 ≈ 0.83) */
+    width: 320px;
+    height: 400px;
   }
 
   .image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Сохраняем пропорции вертикальной картинки */
+    object-fit: cover;
   }
 }
 
@@ -106,17 +105,35 @@
 
   .image_block {
     width: 100%;
-    max-width: 300px; /* Ограничиваем ширину, чтобы картинка не растягивалась */
-    aspect-ratio: 458 / 552; /* Фиксируем пропорции (вертикальная картинка) */
-    height: auto; /* Высота подстраивается под пропорции */
-    margin: 0 auto; /* Центрируем картинку */
+    max-width: 300px;
+    aspect-ratio: 458 / 552;
+    height: auto;
+    margin: 0 auto;
   }
 
   .image {
     width: 100%;
     height: 100%;
-    max-height: 360px; /* Ограничиваем высоту, чтобы картинка не была слишком большой */
-    object-fit: contain; /* Показываем картинку целиком, без обрезки */
+    max-height: 360px;
+    object-fit: contain;
     border-radius: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image_block {
+    display: none;
+  }
+
+  .text_block {
+    padding: 16px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
   }
 }
