@@ -1,10 +1,10 @@
-"use client";
-import { useState, useEffect } from "react";
-import Typography from "@/ui/Typography/Typography";
-import styles from "./Catalog.module.css";
-import Card from "./Card/Card";
-import { data } from "@/constants/data";
-import Pagination from "./Pagination/Pagination";
+'use client';
+import { useState, useEffect } from 'react';
+import Typography from '@/ui/Typography/Typography';
+import styles from './Catalog.module.css';
+import Card from './Card/Card';
+import { data } from '@/constants/data';
+import Pagination from './Pagination/Pagination';
 
 export default function Catalog() {
   const [currentPage, setCurrentPage] = useState<number>(1);

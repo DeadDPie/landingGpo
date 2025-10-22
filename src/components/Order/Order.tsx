@@ -1,7 +1,7 @@
-import Typography from "@/ui/Typography/Typography";
-import styles from "./Order.module.css";
-import Cart from "./Cart/Cart";
-import OrderForm from "./OrderForm/OrderForm";
+import Typography from '@/ui/Typography/Typography';
+import styles from './Order.module.css';
+import Cart from './Cart/Cart';
+import OrderForm from './OrderForm/OrderForm';
 
 export default function Order() {
   return (

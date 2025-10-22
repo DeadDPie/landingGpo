@@ -1,6 +1,6 @@
-"use client";
-import { ReactNode } from "react";
-import styles from "./Modal.module.css";
+'use client';
+import { ReactNode } from 'react';
+import styles from './Modal.module.css';
 
 interface ModalProps {
   onClose: () => void;

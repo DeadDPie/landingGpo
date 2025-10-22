@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import Typography from "@/ui/Typography/Typography";
-import { reviewsData } from "@/constants/data";
-import styles from "./Reviews.module.css";
-import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+'use client';
+import { useState } from 'react';
+import Typography from '@/ui/Typography/Typography';
+import { reviewsData } from '@/constants/data';
+import styles from './Reviews.module.css';
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 
 export default function Reviews() {
   const { title, reviews } = reviewsData;
@@ -30,7 +30,7 @@ export default function Reviews() {
             {title}
           </Typography>
 
-          <div className={styles.textWrapper}>
+          <div className={styles.text_wrapper}>
             <Typography variant="p1" as="p" className={styles.text}>
               {currentReview.text}
             </Typography>

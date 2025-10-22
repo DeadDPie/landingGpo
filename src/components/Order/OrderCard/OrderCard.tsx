@@ -1,8 +1,8 @@
-import Typography from "@/ui/Typography/Typography";
-import styles from "./OrderCard.module.css";
-import Image from "next/image";
-import { CartItem, useCart } from "@/context/CartContext";
-import { IconTrash } from "@tabler/icons-react";
+import Typography from '@/ui/Typography/Typography';
+import styles from './OrderCard.module.css';
+import Image from 'next/image';
+import { CartItem, useCart } from '@/context/CartContext';
+import { IconTrash } from '@tabler/icons-react';
 
 interface OrderCardProps {
   item: CartItem;
@@ -16,7 +16,7 @@ export default function OrderCard({ item }: OrderCardProps) {
     <article className={styles.card}>
       <div className={styles.image_wrapper}>
         <Image
-          src={cake.image || "/images/placeholder.png"}
+          src={cake.image || '/images/placeholder.png'}
           alt={cake.title}
           fill
           sizes="326px"
@@ -33,13 +33,11 @@ export default function OrderCard({ item }: OrderCardProps) {
             </Typography>
           </div>
           <div>
-            {" "}
-            <Typography as="p">Количество: {count}</Typography>{" "}
+            {' '}
+            <Typography as="p">Количество: {count}</Typography>{' '}
             <div className={styles.price}>
               <Typography variant="h2" as="p">
-                {weight
-                  ? `${cake.price * weight * count} р.`
-                  : `${cake.price * count} р.`}{" "}
+                {weight ? `${cake.price * weight * count} р.` : `${cake.price * count} р.`}{' '}
               </Typography>
             </div>
           </div>

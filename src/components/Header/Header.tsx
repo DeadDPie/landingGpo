@@ -1,7 +1,7 @@
-import {socialLinks} from "@/constants/data";
-import Image from "next/image";
-import Typography from "@/ui/Typography/Typography";
-import styles from "./Header.module.css";
+import { socialLinks } from '@/constants/data';
+import Image from 'next/image';
+import Typography from '@/ui/Typography/Typography';
+import styles from './Header.module.css';
 
 export default function Header() {
   return (

@@ -83,6 +83,9 @@
 }
 
 @media (max-width: 768px) {
+  .about{
+    margin-bottom: 2rem;
+  }
   .container {
     flex-direction: column;
     gap: 24px;
@@ -104,36 +107,7 @@
   }
 
   .image_block {
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 458 / 552;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .image {
-    width: 100%;
-    height: 100%;
-    max-height: 360px;
-    object-fit: contain;
-    border-radius: 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .image_block {
     display: none;
   }
-
-  .text_block {
-    padding: 16px 20px;
-  }
-
-  .title {
-    font-size: 24px;
-  }
-
-  .description {
-    font-size: 14px;
-  }
 }
+

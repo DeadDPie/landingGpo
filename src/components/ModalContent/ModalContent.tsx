@@ -1,17 +1,14 @@
-import { useState } from "react";
-import styles from "./ModalContent.module.css";
+import { useState } from 'react';
+import styles from './ModalContent.module.css';
 
 interface ModalContentProps {
   addToCart: (options?: { weight?: number; filling?: string }) => void;
   setIsModalOpen: (open: boolean) => void;
 }
 
-export default function ModalContent({
-  addToCart,
-  setIsModalOpen,
-}: ModalContentProps) {
-  const [weight, setWeight] = useState<string>("");
-  const [filling, setFilling] = useState<string>("");
+export default function ModalContent({ addToCart, setIsModalOpen }: ModalContentProps) {
+  const [weight, setWeight] = useState<string>('');
+  const [filling, setFilling] = useState<string>('');
 
   return (
     <div className={styles.modal_content}>

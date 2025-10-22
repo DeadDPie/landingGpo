@@ -1,168 +1,162 @@
-import { Cake } from "@/types/catalog";
+import { Cake } from '@/types/catalog';
 
 export const data: Cake[] = [
   {
-    id: "1",
-    image: "/images/cake.png",
-    title: "Брусничка1",
-    description:
-      "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
+    id: '1',
+    image: '/images/cake.png',
+    title: 'Брусничка1',
+    description: 'Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ',
     price: 1250,
     hasOptions: true,
   },
   {
-    id: "2",
-    image: "/images/cake.png",
-    title: "Торт 2",
-    description: "Шоколадный бисквит с кремом",
+    id: '2',
+    image: '/images/cake.png',
+    title: 'Торт 2',
+    description: 'Шоколадный бисквит с кремом',
     price: 1399,
   },
   {
-    id: "3",
-    image: "/images/cake.png",
-    title: "Торт 3",
-    description: "Нежный чизкейк с ягодами",
+    id: '3',
+    image: '/images/cake.png',
+    title: 'Торт 3',
+    description: 'Нежный чизкейк с ягодами',
     price: 1459,
     hasOptions: true,
   },
   {
-    id: "11",
-    image: "/images/cake.png",
-    title: "Брусничка 4",
-    description:
-      "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
+    id: '11',
+    image: '/images/cake.png',
+    title: 'Брусничка 4',
+    description: 'Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ',
     price: 1250,
   },
   {
-    id: "12",
-    image: "/images/cake.png",
-    title: "Торт 5",
-    description: "Шоколадный бисквит с кремом",
+    id: '12',
+    image: '/images/cake.png',
+    title: 'Торт 5',
+    description: 'Шоколадный бисквит с кремом',
     price: 1399,
   },
   {
-    id: "13",
-    image: "/images/cake.png",
-    title: "Торт 6",
-    description: "Нежный чизкейк с ягодами",
+    id: '13',
+    image: '/images/cake.png',
+    title: 'Торт 6',
+    description: 'Нежный чизкейк с ягодами',
     price: 1459,
   },
   {
-    id: "21",
-    image: "/images/cake.png",
-    title: "Брусничка 7",
-    description:
-      "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
+    id: '21',
+    image: '/images/cake.png',
+    title: 'Брусничка 7',
+    description: 'Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ',
     price: 1250,
   },
   {
-    id: "22",
-    image: "/images/cake.png",
-    title: "Торт 8",
-    description: "Шоколадный бисквит с кремом",
+    id: '22',
+    image: '/images/cake.png',
+    title: 'Торт 8',
+    description: 'Шоколадный бисквит с кремом',
     price: 1399,
   },
   {
-    id: "123",
-    image: "/images/cake.png",
-    title: "Торт 9",
-    description: "Нежный чизкейк с ягодами",
+    id: '123',
+    image: '/images/cake.png',
+    title: 'Торт 9',
+    description: 'Нежный чизкейк с ягодами',
     price: 1459,
   },
   {
-    id: "113",
-    image: "/images/cake.png",
-    title: "Торт 10",
-    description: "Нежный чизкейк с ягодами",
+    id: '113',
+    image: '/images/cake.png',
+    title: 'Торт 10',
+    description: 'Нежный чизкейк с ягодами',
     price: 1459,
     hasOptions: true,
   },
   {
-    id: "111",
-    image: "/images/cake.png",
-    title: "Брусничка 11",
-    description:
-      "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
+    id: '111',
+    image: '/images/cake.png',
+    title: 'Брусничка 11',
+    description: 'Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ',
     price: 1250,
   },
   {
-    id: "112",
-    image: "/images/cake.png",
-    title: "Торт 12",
-    description: "Шоколадный бисквит с кремом",
+    id: '112',
+    image: '/images/cake.png',
+    title: 'Торт 12',
+    description: 'Шоколадный бисквит с кремом',
     price: 1399,
   },
   {
-    id: "113",
-    image: "/images/cake.png",
-    title: "Торт 13",
-    description: "Нежный чизкейк с ягодами",
+    id: '113',
+    image: '/images/cake.png',
+    title: 'Торт 13',
+    description: 'Нежный чизкейк с ягодами',
     price: 1459,
     hasOptions: true,
   },
   {
-    id: "111",
-    image: "/images/cake.png",
-    title: "Брусничка 14",
-    description:
-      "Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ",
+    id: '111',
+    image: '/images/cake.png',
+    title: 'Брусничка 14',
+    description: 'Шоколадный бисквит прослоен сливочно-творожным кремом с добавлением брусники. ',
     price: 1250,
   },
 ];
 
 export const heroData = {
-  title: "Вкусные торты на заказ!",
+  title: 'Вкусные торты на заказ!',
   description:
-    "Авторские торты, капкейки и пирожные с индивидуальным дизайном и неповторимым вкусом для ваших праздников",
-  smallImage: "/images/hero1.png",
-  mainImage: "/images/hero2.png",
+    'Авторские торты, капкейки и пирожные с индивидуальным дизайном и неповторимым вкусом для ваших праздников',
+  smallImage: '/images/hero1.png',
+  mainImage: '/images/hero2.png',
 };
 
 export const aboutData = {
-  title: "Обо мне",
+  title: 'Обо мне',
   description: `Привет! Меня зовут [Имя]. С детства обожаю превращать простые ингредиенты 
     в настоящие произведения искусства. Для меня кондитерское дело — это не просто работа, 
     а способ делиться радостью и создавать неповторимую атмосферу вашего праздника. 
     Я использую только натуральные продукты и вкладываю душу в каждый десерт.`,
-  image: "/images/conditer.png",
+  image: '/images/conditer.png',
 };
 
 export const socialLinks = [
   {
-    id: "vk",
-    href: "https://vk.com",
-    iconHeader: "/icons/vk_header.svg",
-    iconFooter: "/icons/vk_footer.svg",
+    id: 'vk',
+    href: 'https://vk.com',
+    iconHeader: '/icons/vk_header.svg',
+    iconFooter: '/icons/vk_footer.svg',
   },
   {
-    id: "telegram",
-    href: "https://t.me",
-    iconHeader: "/icons/telegram_header.svg",
-    iconFooter: "/icons/telegram_footer.svg",
+    id: 'telegram',
+    href: 'https://t.me',
+    iconHeader: '/icons/telegram_header.svg',
+    iconFooter: '/icons/telegram_footer.svg',
   },
 ];
 
-
 export const reviewsData = {
-  title: "Отзывы",
+  title: 'Отзывы',
   reviews: [
     {
-      id: "1",
-      text: "Заказывали торт на юбилей! Было не только невероятно красиво, но и очень вкусно! Все гости были в восторге. Обязательно будем заказывать еще!",
-      author: "Юлия Самойлова",
-      role: "покупатель"
+      id: '1',
+      text: 'Заказывали торт на юбилей! Было не только невероятно красиво, но и очень вкусно! Все гости были в восторге. Обязательно будем заказывать еще!',
+      author: 'Юлия Самойлова',
+      role: 'покупатель',
     },
     {
-      id: "2", 
-      text: "Прекрасный торт на день рождения ребенка! Дизайн точно по картинке, вкус восхитительный. Доставили вовремя, все аккуратно упаковано.",
-      author: "Анна Петрова",
-      role: "клиент"
+      id: '2',
+      text: 'Прекрасный торт на день рождения ребенка! Дизайн точно по картинке, вкус восхитительный. Доставили вовремя, все аккуратно упаковано.',
+      author: 'Анна Петрова',
+      role: 'клиент',
     },
     {
-      id: "3",
-      text: "Уже третий раз заказываю торты здесь! Качество всегда на высоте, цены адекватные. Рекомендую всем!",
-      author: "Мария Сидорова",
-      role: "клиент"
-    }
-  ]
+      id: '3',
+      text: 'Уже третий раз заказываю торты здесь! Качество всегда на высоте, цены адекватные. Рекомендую всем!',
+      author: 'Мария Сидорова',
+      role: 'клиент',
+    },
+  ],
 };

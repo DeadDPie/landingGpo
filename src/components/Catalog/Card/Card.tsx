@@ -1,34 +1,28 @@
-"use client";
-import { useState } from "react";
-import Typography from "@/ui/Typography/Typography";
-import styles from "./Card.module.css";
-import type { Cake } from "@/types/catalog";
-import Image from "next/image";
-import Modal from "@/components/Modal/Modal";
-import { useCountButton } from "@/components/CountButton/hooks/useCountButton";
-import CountButton from "@/components/CountButton/CountButton";
-import ModalContent from "@/components/ModalContent/ModalContent";
+'use client';
+import { useState } from 'react';
+import Typography from '@/ui/Typography/Typography';
+import styles from './Card.module.css';
+import type { Cake } from '@/types/catalog';
+import Image from 'next/image';
+import Modal from '@/components/Modal/Modal';
+import { useCountButton } from '@/components/CountButton/hooks/useCountButton';
+import CountButton from '@/components/CountButton/CountButton';
+import ModalContent from '@/components/ModalContent/ModalContent';
 
 interface CardProps {
   cake: Cake;
 }
 
 export default function Card({ cake }: CardProps) {
-  const {
-    count,
-    setCount,
-    isModalOpen,
-    setIsModalOpen,
-    addToCart,
-    handleAddClick,
-  } = useCountButton(cake);
+  const { count, setCount, isModalOpen, setIsModalOpen, addToCart, handleAddClick } =
+    useCountButton(cake);
 
   return (
     <article className={styles.card}>
       <Image
         width={326}
         height={216}
-        src={cake.image || "/images/placeholder.png"}
+        src={cake.image || '/images/placeholder.png'}
         alt={cake.title}
         className={styles.image}
       />
@@ -49,11 +43,7 @@ export default function Card({ cake }: CardProps) {
           </Typography>
         </div>
 
-        <CountButton
-          count={count}
-          setCount={setCount}
-          onAddClick={handleAddClick}
-        />
+        <CountButton count={count} setCount={setCount} onAddClick={handleAddClick} />
       </div>
 
       {isModalOpen && (

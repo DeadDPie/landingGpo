@@ -1,7 +1,7 @@
-"use client";
-import Typography from "@/ui/Typography/Typography";
-import styles from "./CountButton.module.css";
-import cn from "classnames";
+'use client';
+import Typography from '@/ui/Typography/Typography';
+import styles from './CountButton.module.css';
+import cn from 'classnames';
 
 interface CountButtonProps {
   count: number;
@@ -9,11 +9,7 @@ interface CountButtonProps {
   onAddClick: () => void;
 }
 
-export default function CountButton({
-  count,
-  setCount,
-  onAddClick,
-}: CountButtonProps) {
+export default function CountButton({ count, setCount, onAddClick }: CountButtonProps) {
   const handlePlus = () => {
     setCount(count + 1);
     onAddClick();
@@ -35,10 +31,7 @@ export default function CountButton({
         </Typography>
       </div>
 
-      <button
-        className={cn(styles.card_btn, styles.right)}
-        onClick={handlePlus}
-      >
+      <button className={cn(styles.card_btn, styles.right)} onClick={handlePlus}>
         <Typography variant="p1" as="p" className={styles.price}>
           +
         </Typography>

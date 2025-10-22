@@ -1,7 +1,7 @@
-import Typography from "@/ui/Typography/Typography";
-import {aboutData} from "@/constants/data";
-import Image from "next/image";
-import styles from "./About.module.css";
+import Typography from '@/ui/Typography/Typography';
+import { aboutData } from '@/constants/data';
+import Image from 'next/image';
+import styles from './About.module.css';
 
 export default function About() {
   return (
@@ -18,7 +18,7 @@ export default function About() {
 
         <div className={styles.image_block}>
           <Image
-            src={aboutData.image || "/images/placeholder.png"} 
+            src={aboutData.image || '/images/placeholder.png'}
             alt="conditer"
             width={458}
             height={552}

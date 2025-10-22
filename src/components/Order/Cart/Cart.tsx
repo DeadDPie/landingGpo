@@ -1,16 +1,13 @@
-"use client";
-import Typography from "@/ui/Typography/Typography";
-import styles from "./Cart.module.css";
-import OrderCard from "../OrderCard/OrderCard";
-import { useCart } from "@/context/CartContext";
+'use client';
+import Typography from '@/ui/Typography/Typography';
+import styles from './Cart.module.css';
+import OrderCard from '../OrderCard/OrderCard';
+import { useCart } from '@/context/CartContext';
 
 export default function Cart() {
   const { items } = useCart();
 
-  const totalPrice = items.reduce(
-    (sum, item) => sum + item.cake.price * item.count,
-    0
-  );
+  const totalPrice = items.reduce((sum, item) => sum + item.cake.price * item.count, 0);
 
   return (
     <article className={styles.wrapper}>
@@ -19,10 +16,7 @@ export default function Cart() {
       </Typography>
       <div className={styles.list}>
         {items.map((item) => (
-          <OrderCard
-            key={item.cake.id + (item.weight || "") + (item.filling || "")}
-            item={item}
-          />
+          <OrderCard key={item.cake.id + (item.weight || '') + (item.filling || '')} item={item} />
         ))}
       </div>
       <Typography className={styles.footer} variant="h3" as="p">

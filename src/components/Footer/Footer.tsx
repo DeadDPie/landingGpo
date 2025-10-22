@@ -1,7 +1,7 @@
-import {socialLinks} from "@/constants/data";
-import Typography from "@/ui/Typography/Typography";
-import Image from "next/image";
-import styles from "./Footer.module.css";
+import { socialLinks } from '@/constants/data';
+import Typography from '@/ui/Typography/Typography';
+import Image from 'next/image';
+import styles from './Footer.module.css';
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
             Отзывы
           </Typography>
         </nav>
-        
+
         <div className={styles.social_icons}>
           {socialLinks.map((social) => (
             <a key={social.id} href={social.href} target="_blank">

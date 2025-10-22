@@ -1,27 +1,25 @@
-"use client";
-import Typography from "@/ui/Typography/Typography";
-import styles from "./OrderForm.module.css";
-import { useState, useRef } from "react";
-import { IconPaperclip } from "@tabler/icons-react";
+'use client';
+import Typography from '@/ui/Typography/Typography';
+import styles from './OrderForm.module.css';
+import { useState, useRef } from 'react';
+import { IconPaperclip } from '@tabler/icons-react';
 
 export default function OrderForm() {
   const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    date: "",
-    requests: "",
+    name: '',
+    phone: '',
+    date: '',
+    requests: '',
   });
 
   const [files, setFiles] = useState<File[]>([]);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     if (errors[e.target.name]) {
-      setErrors({ ...errors, [e.target.name]: "" });
+      setErrors({ ...errors, [e.target.name]: '' });
     }
   };
 
@@ -38,11 +36,10 @@ export default function OrderForm() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.name.trim()) newErrors.name = "Введите имя";
-    if (!formData.phone.trim()) newErrors.phone = "Введите телефон";
-    else if (!/^\+?\d{10,15}$/.test(formData.phone))
-      newErrors.phone = "Некорректный номер";
-    if (!formData.date) newErrors.date = "Выберите дату";
+    if (!formData.name.trim()) newErrors.name = 'Введите имя';
+    if (!formData.phone.trim()) newErrors.phone = 'Введите телефон';
+    else if (!/^\+?\d{10,15}$/.test(formData.phone)) newErrors.phone = 'Некорректный номер';
+    if (!formData.date) newErrors.date = 'Выберите дату';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -78,7 +75,7 @@ export default function OrderForm() {
         onChange={handleChange}
         type="text"
         placeholder="Имя"
-        className={`${styles.input} ${errors.name ? styles.error : ""}`}
+        className={`${styles.input} ${errors.name ? styles.error : ''}`}
       />
       {errors.name && <p className={styles.error_text}>{errors.name}</p>}
 
@@ -88,7 +85,7 @@ export default function OrderForm() {
         onChange={handleChange}
         type="tel"
         placeholder="Телефон"
-        className={`${styles.input} ${errors.phone ? styles.error : ""}`}
+        className={`${styles.input} ${errors.phone ? styles.error : ''}`}
       />
       {errors.phone && <p className={styles.error_text}>{errors.phone}</p>}
 
@@ -97,9 +94,7 @@ export default function OrderForm() {
         value={formData.date}
         onChange={handleChange}
         type="date"
-        className={`${styles.input} ${styles.date} ${
-          errors.date ? styles.error : ""
-        }`}
+        className={`${styles.input} ${styles.date} ${errors.date ? styles.error : ''}`}
       />
       {errors.date && <p className={styles.error_text}>{errors.date}</p>}
 
@@ -111,11 +106,7 @@ export default function OrderForm() {
           placeholder="Пожелания"
           className={`${styles.input} ${styles.textarea}`}
         />
-        <IconPaperclip
-          size={24}
-          className={styles.paperclip}
-          onClick={handleIconClick}
-        />
+        <IconPaperclip size={24} className={styles.paperclip} onClick={handleIconClick} />
         <input
           ref={fileInputRef}
           type="file"
@@ -145,8 +136,8 @@ export default function OrderForm() {
         </Typography>
       </button>
       <Typography variant="p2">
-        Нажимая кнопку “Заказать” вы автоматически соглашаетесь с политикой
-        конфиденциальности и обработки личных данных.
+        Нажимая кнопку “Заказать” вы автоматически соглашаетесь с политикой конфиденциальности и
+        обработки личных данных.
       </Typography>
     </form>
   );

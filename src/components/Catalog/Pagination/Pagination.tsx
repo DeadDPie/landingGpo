@@ -1,6 +1,6 @@
-import Typography from "@/ui/Typography/Typography";
-import styles from "./Pagination.module.css";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import Typography from '@/ui/Typography/Typography';
+import styles from './Pagination.module.css';
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 
 interface PaginationProps {
   currentPage: number;
@@ -8,11 +8,7 @@ interface PaginationProps {
   onPageChange: (page: number) => void;
 }
 
-export default function Pagination({
-  currentPage,
-  totalPages,
-  onPageChange,
-}: PaginationProps) {
+export default function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
   const goto = (p: number) => {
     const normalized = Math.max(1, Math.min(totalPages, Math.floor(p) || 1));
@@ -33,9 +29,7 @@ export default function Pagination({
         {pages.map((page) => (
           <Typography
             key={page}
-            className={`${styles.page_number} ${
-              currentPage === page ? styles.active : ""
-            }`}
+            className={`${styles.page_number} ${currentPage === page ? styles.active : ''}`}
             as="p"
           >
             {page}

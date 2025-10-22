@@ -1,6 +1,6 @@
-import { useState } from "react";
-import type { Cake } from "@/types/catalog";
-import { useCart } from "@/context/CartContext";
+import { useState } from 'react';
+import type { Cake } from '@/types/catalog';
+import { useCart } from '@/context/CartContext';
 
 export function useCountButton(cake: Cake) {
   const [count, setCount] = useState(0);
