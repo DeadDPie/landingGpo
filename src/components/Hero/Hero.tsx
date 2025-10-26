@@ -20,9 +20,14 @@ export default function Hero() {
               height={288}
               className={styles.image}
             />
-            <Typography variant="p1" as="p" className={styles.description}>
-              {heroData.description}
-            </Typography>
+            <div className={styles.text_container}>
+              <Typography variant="p1" as="p" className={styles.description}>
+                {heroData.description}
+              </Typography>
+              <Typography variant="h2" as="a" href="#catalog" className={styles.order_button}>
+                Заказать
+              </Typography>
+            </div>
           </div>
         </div>
         <div className={styles.main_image}>
