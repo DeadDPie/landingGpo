@@ -9,8 +9,10 @@ export default function Order() {
       <Typography className={styles.title} variant="h1" as="p">
         Оформить заказ
       </Typography>
-      <Cart />
-      <OrderForm />
+      <div className={styles.container}>
+        <Cart />
+        <OrderForm />
+      </div>
     </section>
   );
 }

@@ -2,7 +2,8 @@ import Typography from "@/ui/Typography/Typography";
 import styles from "./OrderCard.module.css";
 import Image from "next/image";
 import { CartItem, useCart } from "@/context/CartContext";
-import { IconTrash } from "@tabler/icons-react";
+import { IconTrash, IconX } from "@tabler/icons-react";
+import { CURRENT_THEME } from "@/config/theme";
 
 interface OrderCardProps {
   item: CartItem;
@@ -56,7 +57,22 @@ export default function OrderCard({ item }: OrderCardProps) {
         </div>
 
         <div className={styles.card_foot_container}>
-          <IconTrash onClick={() => removeItem(cake.id)} />
+          {CURRENT_THEME === "B" && (
+            <div className={styles.removeInGrid}>
+              <button
+                type="button"
+                className={styles.remove}
+                onClick={() => removeItem(cake.id)}
+                aria-label="Удалить из корзины"
+              >
+                <IconX />
+              </button>
+            </div>
+          )}
+
+          {CURRENT_THEME !== "B" && (
+            <IconTrash onClick={() => removeItem(cake.id)} />
+          )}
         </div>
       </div>
     </article>

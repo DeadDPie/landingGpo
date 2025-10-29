@@ -3,8 +3,9 @@ import Typography from "@/ui/Typography/Typography";
 import styles from "./OrderForm.module.css";
 import { useState, useRef } from "react";
 import { IconPaperclip } from "@tabler/icons-react";
+import cn from "classnames";
 
-export default function OrderForm() {
+export default function () {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -21,7 +22,7 @@ export default function OrderForm() {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     if (errors[e.target.name]) {
-      setErrors({ ...errors, [e.target.name]: "" });
+      setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
     }
   };
 
@@ -78,9 +79,15 @@ export default function OrderForm() {
         onChange={handleChange}
         type="text"
         placeholder="Имя"
-        className={`${styles.input} ${errors.name ? styles.error : ""}`}
+        aria-invalid={!!errors.name}
+        aria-describedby={errors.name ? "error-name" : undefined}
+        className={cn(styles.input, { [styles.inputError]: errors.name })}
       />
-      {errors.name && <p className={styles.error_text}>{errors.name}</p>}
+      {errors.name && (
+        <p id="error-name" className={styles.error_text}>
+          {errors.name}
+        </p>
+      )}
 
       <input
         name="phone"
@@ -88,20 +95,32 @@ export default function OrderForm() {
         onChange={handleChange}
         type="tel"
         placeholder="Телефон"
-        className={`${styles.input} ${errors.phone ? styles.error : ""}`}
+        aria-invalid={!!errors.phone}
+        aria-describedby={errors.phone ? "error-phone" : undefined}
+        className={cn(styles.input, { [styles.inputError]: errors.phone })}
       />
-      {errors.phone && <p className={styles.error_text}>{errors.phone}</p>}
+      {errors.phone && (
+        <p id="error-phone" className={styles.error_text}>
+          {errors.phone}
+        </p>
+      )}
 
       <input
         name="date"
         value={formData.date}
         onChange={handleChange}
         type="date"
-        className={`${styles.input} ${styles.date} ${
-          errors.date ? styles.error : ""
-        }`}
+        aria-invalid={!!errors.date}
+        aria-describedby={errors.date ? "error-date" : undefined}
+        className={cn(styles.input, styles.date, {
+          [styles.inputError]: errors.date,
+        })}
       />
-      {errors.date && <p className={styles.error_text}>{errors.date}</p>}
+      {errors.date && (
+        <p id="error-date" className={styles.error_text}>
+          {errors.date}
+        </p>
+      )}
 
       <div className={styles.textarea_container}>
         <textarea
@@ -109,12 +128,13 @@ export default function OrderForm() {
           value={formData.requests}
           onChange={handleChange}
           placeholder="Пожелания"
-          className={`${styles.input} ${styles.textarea}`}
+          className={cn(styles.input, styles.textarea)}
         />
         <IconPaperclip
           size={24}
           className={styles.paperclip}
           onClick={handleIconClick}
+          aria-label="Прикрепить файл"
         />
         <input
           ref={fileInputRef}
@@ -132,7 +152,7 @@ export default function OrderForm() {
             <img
               key={i}
               src={URL.createObjectURL(file)}
-              alt={`preview-${i}`}
+              alt={`Превью ${i + 1}`}
               className={styles.preview_image}
             />
           ))}
@@ -144,8 +164,9 @@ export default function OrderForm() {
           Заказать
         </Typography>
       </button>
-      <Typography variant="p2">
-        Нажимая кнопку “Заказать” вы автоматически соглашаетесь с политикой
+
+      <Typography variant="p2" className={styles.privacy}>
+        Нажимая кнопку “Заказать”, вы соглашаетесь с политикой
         конфиденциальности и обработки личных данных.
       </Typography>
     </form>
