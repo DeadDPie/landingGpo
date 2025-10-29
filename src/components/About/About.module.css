@@ -1,8 +1,13 @@
 .about {
+  background-color: transparent;
+  padding: 4rem 0;
+  margin-bottom: 0;
+}
+
+.about_wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
-  margin-bottom: 4rem;
 }
 
 .container {
@@ -25,7 +30,7 @@
 }
 
 .title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-family-playfair), serif;
   font-weight: 600;
   font-size: 64px;
   color: var(--color-text-white);
@@ -49,4 +54,135 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    gap: 32px;
+  }
+
+  .text_block {
+    padding: 24px 32px;
+    height: 400px;
+    min-width: 250px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .image_block {
+    width: 320px;
+    height: 400px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .text_block {
+    height: auto;
+    padding: 20px 24px;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .image_block {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 458 / 552;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
+    object-fit: contain;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image_block {
+    display: none;
+  }
+
+  .text_block {
+    padding: 16px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+html[data-theme="B"] .about {
+  background-color: var(--color-text-main);
+  padding: 4rem 0;
+  margin-bottom: 4rem;
+}
+
+html[data-theme="B"] .container {
+  gap: 20rem;
+}
+
+html[data-theme="B"] .text_block {
+  order: 2;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  height: auto;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 300px;
+}
+
+html[data-theme="B"] .image_block {
+  order: 1;
+  width: 320px;
+  height: auto;
+}
+
+html[data-theme="B"] .image {
+  border-radius: 0;
+}
+
+html[data-theme="B"] .title {
+  font-size: 40px;
+  color: var(--color-background);
+  font-family: var(--font-family-playfair), serif;
+  font-weight: 700;
+}
+
+html[data-theme="B"] .description {
+  font-size: 20px;
+  font-weight: 100;
+  color: var(--color-background);
 }
