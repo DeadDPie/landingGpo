@@ -25,6 +25,17 @@
   align-self: flex-end;
 }
 
+.headerImage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.image {
+  height: auto;
+  max-width: 100%;
+}
+
 @media (max-width: 1024px) {
   .wrapper {
     padding: 0 12px;
