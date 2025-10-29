@@ -7,9 +7,9 @@
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,4 +116,81 @@
     width: 34px;
     height: 33px;
   }
+}
+
+html[data-theme="B"] .header {
+  background-color: var(--color-text-main);
+  height: 80px;
+  padding: 1.5rem 0;
+}
+
+html[data-theme="B"] .container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 3rem;
+}
+
+html[data-theme="B"] .logo {
+  display: flex;
+  align-items: center;
+}
+
+html[data-theme="B"] .logo_icon {
+  width: 40px;
+  height: auto;
+}
+
+html[data-theme="B"] .nav {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+html[data-theme="B"] .link {
+  color: var(--color-background);
+  font-family: var(--font-family-playfair), serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+html[data-theme="B"] .icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+html[data-theme="B"] .contacts {
+  display: flex;
+  align-items: center;
+  order: 1;
+}
+
+html[data-theme="B"] .phone {
+  color: var(--color-background);
+  font-family: var(--font-family-croissant), cursive;
+  font-size: 20px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+html[data-theme="B"] .cart_link {
+  display: flex;
+  align-items: center;
+  order: 2;
+}
+
+html[data-theme="B"] .social_icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  order: 3;
+}
+
+html[data-theme="B"] .icon {
+  width: 40px;
+  height: auto;
 }
