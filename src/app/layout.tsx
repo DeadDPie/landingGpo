@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
+import { CURRENT_THEME } from "@/config/theme";
 
 const montserrat = Montserrat_Alternates({
   variable: "--font-family-mont",
@@ -20,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body className={montserrat.variable}>
+    <html lang="ru" data-theme={CURRENT_THEME} className={montserrat.variable}>
+      <body>
         <CartProvider>{children}</CartProvider>
       </body>
     </html>

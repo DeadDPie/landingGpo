@@ -4,17 +4,6 @@
   margin: 0;
 }
 
-:root {
-  --font-family-mont: "Montserrat Alternates", system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-  --color-text-main: #372825;
-  --color-text-white: #ffffff;
-  --color-border-main: #372825;
-  --color-background: #ffffff;
-  --color-blocks: #a0231f;
-}
-
 html,
 body {
   max-width: 100vw;
@@ -28,4 +17,19 @@ body {
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --font-family-mont: "Montserrat Alternates", system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-b: "Roboto Mono", monospace;
+  --color-text-main: #372825;
+  --color-text-white: #ffffff;
+  --color-border-main: #372825;
+  --color-background: #ffffff;
+  --color-blocks: #a0231f;
+}
+
+html[data-theme="B"] {
+  --font-family-mont: var(--font-family-b);
 }
