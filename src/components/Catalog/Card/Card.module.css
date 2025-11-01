@@ -41,3 +41,27 @@
   align-items: center;
   margin-top: auto;
 }
+
+html[data-theme="B"] .card {
+  border-radius: 0;
+  border-width: 3px;
+}
+
+html[data-theme="B"] .image {
+  max-height: 300px;
+  border-radius: 0;
+}
+
+html[data-theme="B"] .title_text {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+}
+
+html[data-theme="B"] .title {
+  text-align: center;
+}
+
+html[data-theme="B"] .price {
+  text-decoration: none;
+}

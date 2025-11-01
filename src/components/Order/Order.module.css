@@ -21,11 +21,6 @@
   margin-top: 16px;
 }
 
-html[data-theme="B"] .title {
-  font-family: var(--font-family-playfair), serif;
-  font-weight: 700;
-}
-
 @media (max-width: 1024px) {
   .wrapper {
     gap: 18px;

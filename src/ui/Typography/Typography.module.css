@@ -32,3 +32,14 @@
   font-size: 16px;
   color: var(--color-text-main);
 }
+
+html[data-theme="B"] .h1 {
+  font-family: var(--font-family-playfair), serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+html[data-theme="B"] .p1 {
+  font-weight: 400;
+}
