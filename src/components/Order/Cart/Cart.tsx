@@ -26,7 +26,7 @@ export default function Cart() {
       {CURRENT_THEME === "B" && items.length === 0 && (
         <div className={styles.headerImage}>
           <Image
-            src="/images/placeholder.png"
+            src="/images/cake.png"
             alt="Декоративное изображение торта"
             width={458}
             height={552}

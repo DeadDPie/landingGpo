@@ -176,6 +176,11 @@ html[data-theme="B"] .order_btn {
   max-width: 100%;
 }
 
+html[data-theme="B"] .order_btn_text {
+  font-family: var(--font-family-playfair), serif;
+  font-weight: 700;
+}
+
 html[data-theme="B"] .wrapper {
   align-items: stretch;
 }
