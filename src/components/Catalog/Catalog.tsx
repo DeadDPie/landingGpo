@@ -5,6 +5,7 @@ import styles from "./Catalog.module.css";
 import Card from "./Card/Card";
 import { data } from "@/constants/data";
 import Pagination from "./Pagination/Pagination";
+import { CURRENT_THEME } from "@/config/theme";
 
 export default function Catalog() {
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -33,12 +34,13 @@ export default function Catalog() {
           <Card key={cake.id} cake={cake} />
         ))}
       </div>
-
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
+      {CURRENT_THEME !== "B" && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      )}
     </section>
   );
 }

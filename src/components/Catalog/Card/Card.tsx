@@ -47,8 +47,8 @@ export default function Card({ cake }: CardProps) {
       )}
       <div className={styles.bottom_container}>
         <div className={styles.price}>
-          <Typography variant="h2" as="p">
-            {cake.price} р/кг.
+          <Typography variant="p1" as="p">
+            {cake.price} руб.
           </Typography>
         </div>
 
@@ -60,6 +60,32 @@ export default function Card({ cake }: CardProps) {
           />
         )}
       </div>
+      <button className={styles.button_choose}>
+        <Typography variant="p1" as="p">
+          Выбрать десерт
+        </Typography>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 74 46"
+          width="4em"
+          height="4em"
+          fill="none"
+          strokeWidth="2"
+        >
+          <circle
+            strokeWidth="2"
+            cx="47.43"
+            cy="18.57"
+            r="17.57"
+            fill="white"
+            stroke="black"
+          />
+          <path
+            d="M0 18.57h47.43m0 0l-4.52-2.93m4.52 2.93l-4.52 2.93"
+            stroke="black"
+          />
+        </svg>
+      </button>
 
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)}>

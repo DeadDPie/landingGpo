@@ -42,13 +42,28 @@
   margin-top: auto;
 }
 
+.button_choose {
+  background-color: transparent;
+  border: none;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
 html[data-theme="B"] .card {
   border-radius: 0;
   border-width: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 500px;
 }
 
 html[data-theme="B"] .image {
-  max-height: 300px;
+  height: 300px;
   border-radius: 0;
 }
 
@@ -64,4 +79,12 @@ html[data-theme="B"] .title {
 
 html[data-theme="B"] .price {
   text-decoration: none;
+  font-weight: 300;
+}
+
+html[data-theme="B"] .bottom_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
 }
