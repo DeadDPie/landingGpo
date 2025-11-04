@@ -32,7 +32,7 @@ body {
 
 html[data-theme="B"] {
   --font-family-mont: var(--font-family-b);
-  --color-text-main: #2D1B1B;
-  --color-border-main: #2D1B1B;
+  --color-text-main: #2d1b1b;
+  --color-border-main: #2d1b1b;
   --color-background: #ffffff;
 }

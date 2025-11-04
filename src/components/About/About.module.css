@@ -30,7 +30,6 @@
 }
 
 .title {
-  font-family: var(--font-family-playfair), serif;
   font-weight: 600;
   font-size: 64px;
   color: var(--color-text-white);
@@ -177,8 +176,6 @@ html[data-theme="B"] .image {
 html[data-theme="B"] .title {
   font-size: 40px;
   color: var(--color-background);
-  font-family: var(--font-family-playfair), serif;
-  font-weight: 700;
 }
 
 html[data-theme="B"] .description {
