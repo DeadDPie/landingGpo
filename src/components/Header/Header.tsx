@@ -47,8 +47,8 @@ export default function Header() {
             <Image
               src={data.cartIcon}
               alt="cart"
-              width={CURRENT_THEME === "B" ? 32 : 49}
-              height={CURRENT_THEME === "B" ? 32 : 48}
+              width={49}
+              height={48}
               className={styles.icon}
             />
           </a>
@@ -59,8 +59,8 @@ export default function Header() {
                 <Image
                   src={social.icon}
                   alt={social.id}
-                  width={CURRENT_THEME === "B" ? 32 : 64}
-                  height={CURRENT_THEME === "B" ? 32 : 64}
+                  width={64}
+                  height={64}
                   className={styles.icon}
                 />
               </a>
