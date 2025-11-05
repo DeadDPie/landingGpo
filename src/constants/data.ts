@@ -230,7 +230,7 @@ export const headerData = {
     phone: "+7 (952) 234-45-56",
     navItems: [
       { label: "О СЕБЕ", href: "#about" },
-      { label: "АССОРТИМЕНТ", href: "#catalog" },
+      { label: "КАТАЛОГ", href: "#catalog" },
       { label: "ОТЗЫВЫ", href: "#reviews" },
       { label: "ОФОРМИТЬ ЗАКАЗ", href: "#order" }
     ],
