@@ -137,21 +137,48 @@ export const aboutData = {
   },
 };
 
-export const socialLinks = [
-  {
-    id: "vk",
-    href: "https://vk.com",
-    iconHeader: "/icons/vk_header.svg",
-    iconFooter: "/icons/vk_footer.svg",
+export const footerData = {
+  A: {
+    navItems: [
+      { label: "Каталог", href: "#catalog" },
+      { label: "Обо мне", href: "#about" }, 
+      { label: "Отзывы", href: "#reviews" }
+    ],
+    socialLinks: [
+      {
+        id: "vk",
+        href: "https://vk.com",
+        icon: "/icons/vk_footer.svg",
+      },
+      {
+        id: "telegram",
+        href: "https://t.me", 
+        icon: "/icons/telegram_footer.svg",
+      },
+    ]
   },
-  {
-    id: "telegram",
-    href: "https://t.me",
-    iconHeader: "/icons/telegram_header.svg",
-    iconFooter: "/icons/telegram_footer.svg",
-  },
-];
-
+  B: {
+    logo: "/icons/logo_themeB.svg",
+    phone: "+7 (952) 234-45-56",
+    textLines: [
+      "Написан текст о чем-либо. Описание чего-либо. Адрес или что-нибудь еще.",
+      "Написан текст о чем-либо. Описание чего-либо. Адрес или что-нибудь еще.", 
+      "Написан текст о чем-либо. Описание чего-либо. Адрес или что-нибудь еще."
+    ],
+    socialLinks: [
+      {
+        id: "vk",
+        href: "https://vk.com",
+        icon: "/icons/vk2.svg",
+      },
+      {
+        id: "telegram",
+        href: "https://t.me",
+        icon: "/icons/telegram2.svg",
+      },
+    ]
+  }
+};
 
 export const reviewsData = {
   title: "Отзывы",
@@ -175,4 +202,50 @@ export const reviewsData = {
       role: "постоянный клиент"
     }
   ]
+};
+
+export const headerData = {
+  A: {
+    navItems: [
+      { label: "Каталог", href: "#catalog" },
+      { label: "Обо мне", href: "#about" }, 
+      { label: "Отзывы", href: "#reviews" }
+    ],
+    cartIcon: "/icons/cart.svg",
+    socialLinks: [
+      {
+        id: "vk",
+        href: "https://vk.com",
+        icon: "/icons/vk_header.svg",
+      },
+      {
+        id: "telegram",
+        href: "https://t.me", 
+        icon: "/icons/telegram_header.svg",
+      },
+    ]
+  },
+  B: {
+    logo: "/icons/logo_themeB.svg",
+    phone: "+7 (952) 234-45-56",
+    navItems: [
+      { label: "О СЕБЕ", href: "#about" },
+      { label: "КАТАЛОГ", href: "#catalog" },
+      { label: "ОТЗЫВЫ", href: "#reviews" },
+      { label: "ОФОРМИТЬ ЗАКАЗ", href: "#order" }
+    ],
+    cartIcon: "/icons/cart2.svg",
+    socialLinks: [
+      {
+        id: "vk",
+        href: "https://vk.com",
+        icon: "/icons/vk2.svg",
+      },
+      {
+        id: "telegram",
+        href: "https://t.me",
+        icon: "/icons/telegram2.svg", 
+      },
+    ]
+  }
 };

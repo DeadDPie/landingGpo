@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import { Playfair_Display } from "next/font/google"; 
+import { Croissant_One } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { CURRENT_THEME } from "@/config/theme";
@@ -17,6 +18,12 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700"],
 });
 
+const croissant = Croissant_One({
+  variable: "--font-family-croissant",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata: Metadata = {
   title: "Лендинг",
   description: "Описание лендинга",
@@ -28,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" data-theme={CURRENT_THEME} className={`${montserrat.variable} ${playfair.variable}`}>
+    <html lang="ru" data-theme={CURRENT_THEME} className={`${montserrat.variable} ${playfair.variable} ${croissant.variable}`}>
       <body>
         <CartProvider>{children}</CartProvider>
       </body>
