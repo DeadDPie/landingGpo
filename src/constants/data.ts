@@ -111,11 +111,19 @@ export const data: Cake[] = [
 ];
 
 export const heroData = {
-  title: "Вкусные торты на заказ!",
-  description:
-    "Авторские торты, капкейки и пирожные с индивидуальным дизайном и неповторимым вкусом для ваших праздников",
-  smallImage: "/images/hero1.png",
-  mainImage: "/images/hero2.png",
+  A: {
+    title: "Вкусные торты на заказ!",
+    description: "Авторские торты, капкейки и пирожные с индивидуальным дизайном и неповторимым вкусом для ваших праздников",
+    smallImage: "/images/hero1.png",
+    mainImage: "/images/hero2.png",
+  },
+  B: {
+    title1: "ДЕСЕРТЫ НА ЗАКАЗ",
+    title2: "В ТОМСКЕ", 
+    description: "Наши десерты изготовлены только из натуральных ингредиентов, без сахара, искусственных ароматизаторов, красителей и консервантов",
+    choose_text: "Выбрать десерт",
+    mainImage: "/images/heroB.png",
+  }
 };
 
 export const aboutData = {
