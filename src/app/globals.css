@@ -35,4 +35,5 @@ html[data-theme="B"] {
   --color-text-main: #2d1b1b;
   --color-border-main: #2d1b1b;
   --color-background: #ffffff;
+  --color-text-black: #000000;
 }
