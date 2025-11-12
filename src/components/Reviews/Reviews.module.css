@@ -188,14 +188,13 @@ html[data-theme="B"] .title_b {
 
 html[data-theme="B"] .cards_container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(3, 380px);
+  gap: 5rem;
+  justify-content: center;
 }
 
 html[data-theme="B"] .review_card {
   background-color: var(--color-background);
-  width: 380px;
   height: 366px;
   padding: 20px;
   display: flex;
