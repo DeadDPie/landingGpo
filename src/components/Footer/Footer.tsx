@@ -23,29 +23,28 @@ export default function Footer() {
         )}
 
         {CURRENT_THEME === "B" && (
-  <div className={styles.center_section}>
-    {'textLines' in data && data.textLines && (
-      <div className={styles.text_block}>
-        {data.textLines.map((line, index) => (
-          <Typography
-            key={index}
-            variant="p1"
-            className={`${styles.text_line} ${index === 0 ? styles.first_line : styles.other_lines}`}
-          >
-            {line}
-          </Typography>
-        ))}
-      </div>
-    )}
+          <div className={styles.center_section}>
+            {'textLines' in data && data.textLines && (
+              <div className={styles.text_block}>
+                {data.textLines.map((line, index) => (
+                  <Typography
+                    key={index}
+                    variant="p1"
+                    className={`${styles.text_line} ${index === 0 ? styles.first_line : styles.other_lines}`}
+                  >
+                    {line}
+                  </Typography>
+                ))}
+              </div>
+            )}
 
-    {'phone' in data && data.phone && (
-      <div className={styles.phone}>
-        {data.phone}
-      </div>
-    )}
-  </div>
-)}
-
+            {'phone' in data && data.phone && (
+              <div className={styles.phone}>
+                {data.phone}
+              </div>
+            )}
+          </div>
+        )}
 
         {CURRENT_THEME === "A" && (
           <nav className={styles.nav}>

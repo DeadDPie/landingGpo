@@ -249,7 +249,7 @@ html[data-theme="B"] .icon {
   html[data-theme="B"] .logo {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 10px;
     order: 1;
   }
 
@@ -263,7 +263,7 @@ html[data-theme="B"] .icon {
 
   html[data-theme="B"] .contacts {
     order: 2;
-    margin-left: 4px;
+    margin-left: 10px;
   }
 
   html[data-theme="B"] .phone {
@@ -272,8 +272,8 @@ html[data-theme="B"] .icon {
 
   html[data-theme="B"] .social_icons {
     order: 3;
-    gap: 4px;
-    margin-left: 4px;
+    gap: 10px;
+    margin-left: 10px;
   }
   html[data-theme="B"] .social_icons .icon {
     width: 24px;
