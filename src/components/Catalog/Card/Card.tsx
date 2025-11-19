@@ -60,36 +60,42 @@ export default function Card({ cake }: CardProps) {
           />
         )}
       </div>
-      <button className={styles.button_choose}>
-        <Typography variant="p1" as="p">
-          Выбрать десерт
-        </Typography>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 74 46"
-          width="4em"
-          height="4em"
-          fill="none"
-          strokeWidth="2"
-        >
-          <circle
+      {CURRENT_THEME === "B" && (
+        <button className={styles.button_choose} onClick={handleAddClick}>
+          <Typography variant="p1" as="p">
+            Выбрать десерт
+          </Typography>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 74 46"
+            width="4em"
+            height="4em"
+            fill="none"
             strokeWidth="2"
-            cx="47.43"
-            cy="18.57"
-            r="17.57"
-            fill="white"
-            stroke="black"
-          />
-          <path
-            d="M0 18.57h47.43m0 0l-4.52-2.93m4.52 2.93l-4.52 2.93"
-            stroke="black"
-          />
-        </svg>
-      </button>
+          >
+            <circle
+              strokeWidth="2"
+              cx="47.43"
+              cy="18.57"
+              r="17.57"
+              fill="white"
+              stroke="black"
+            />
+            <path
+              d="M0 18.57h47.43m0 0l-4.52-2.93m4.52 2.93l-4.52 2.93"
+              stroke="black"
+            />
+          </svg>
+        </button>
+      )}
 
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)}>
-          <ModalContent addToCart={addToCart} setIsModalOpen={setIsModalOpen} />
+          <ModalContent
+            cake={cake}
+            addToCart={addToCart}
+            setIsModalOpen={setIsModalOpen}
+          />
         </Modal>
       )}
     </article>

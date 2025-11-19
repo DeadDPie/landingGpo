@@ -30,3 +30,17 @@
   font-size: 24px;
   cursor: pointer;
 }
+
+html[data-theme="B"] .modal {
+  background-color: white;
+  border-radius: 0px;
+  max-width: 800px;
+  max-height: 600px;
+}
+
+html[data-theme="B"] .closeBtn {
+  color: var(--color-border-main);
+  border: 2px solid var(--color-border-main);
+  width: 32px;
+  height: 32px;
+}
