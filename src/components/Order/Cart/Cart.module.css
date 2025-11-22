@@ -81,3 +81,9 @@
     margin-top: 16px;
   }
 }
+
+@media (max-width: 768px) {
+  html[data-theme="B"] .headerImage {
+    display: none;
+  }
+}
