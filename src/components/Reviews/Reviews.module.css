@@ -223,3 +223,123 @@ html[data-theme="B"] .review_text {
   text-align: left;
   width: 100%;
 }
+
+@media (max-width: 1024px) {
+  html[data-theme="B"] .title_b {
+    font-size: 32px;
+  }
+
+  html[data-theme="B"] .cards_container {
+    display: none;
+  }
+  
+  html[data-theme="B"] .carousel_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  html[data-theme="B"] .carousel_card {
+    background-color: var(--color-background);
+    width: 560px;
+    height: 409px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  
+  html[data-theme="B"] .carousel_image_container {
+    width: 505px; 
+    height: 296px;
+    margin-bottom: 20px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  html[data-theme="B"] .carousel_text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-text-main);
+    text-align: left;
+    width: 505px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html[data-theme="B"] .carousel_arrow {
+    background: transparent;
+    border: none;
+    color: var(--color-text-white);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  html[data-theme="B"] .carousel_arrow svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  html[data-theme="B"] .reviews_wrapper_b {
+    padding: 2rem 0;
+  }
+
+  html[data-theme="B"] .title_b {
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+
+  html[data-theme="B"] .carousel_container {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  html[data-theme="B"] .carousel_card {
+    width: 280px;
+    height: 281px;
+    padding: 12px;
+  }
+  
+  html[data-theme="B"] .carousel_image_container {
+    width: 255px;
+    height: 191px;
+    margin-bottom: 12px;
+  }
+  
+  html[data-theme="B"] .carousel_text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    width: 255px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html[data-theme="B"] .carousel_arrow {
+    padding: 0.25rem;
+  }
+  
+  html[data-theme="B"] .carousel_arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html[data-theme="B"] .carousel_container {
+    display: none;
+  }
+}
