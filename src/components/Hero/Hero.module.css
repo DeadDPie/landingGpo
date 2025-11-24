@@ -261,3 +261,123 @@ html[data-theme="B"] .container {
 .choose_link {
   text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+  html[data-theme="B"] .container {
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    padding: 0 1.5rem;
+    align-items: end;
+  }
+  
+  .title_line1 {
+    font-family: var(--font-family-playfair), serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+  }
+  
+  .title_line2 {
+    font-family: var(--font-family-playfair), serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+  }
+  
+  .description_b {
+    font-family: var(--font-family-roboto-mono), monospace;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 400px;
+  }
+  
+  .choose_text {
+    font-family: var(--font-family-mont);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+  }
+  
+  .arrow_button svg {
+    width: 6em;
+    height: 6em;
+  }
+  
+  .main_image_b {
+    margin-right: -5rem;
+    align-items: flex-end;
+    margin-top: 0;
+    height: 100%;
+    display: flex;
+    align-items: end;
+  }
+  
+  .image_b {
+    width: 384px;
+    height: 351px;
+    object-fit: cover;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  html[data-theme="B"] .hero {
+    padding: 2rem 0;
+  }
+
+  html[data-theme="B"] .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    align-items: center;
+  }
+  
+  .title_block {
+    text-align: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .title_line1 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  
+  .title_line2 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  
+  .content_b {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .description_b {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .choose_block {
+    display: none;
+  }
+  
+  .main_image_b {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+  }
+  
+  .image_b {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+}
