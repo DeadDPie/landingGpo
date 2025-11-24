@@ -238,7 +238,7 @@ html[data-theme="B"] .icon {
   }
 
   html[data-theme="B"] .container {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -258,7 +258,7 @@ html[data-theme="B"] .icon {
   }
 
   html[data-theme="B"] .nav {
-    display: none !important;
+    display: none;
   }
 
   html[data-theme="B"] .contacts {
@@ -288,6 +288,6 @@ html[data-theme="B"] .icon {
   }
 
   html[data-theme="B"] .icons {
-    display: contents !important;
+    display: contents;
   }
 }
