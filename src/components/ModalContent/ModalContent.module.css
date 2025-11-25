@@ -109,3 +109,25 @@ html[data-theme="B"] .modal_btn {
   background-color: var(--color-border-main);
   margin-top: 16px;
 }
+
+@media (max-width: 768px) {
+  html[data-theme="B"] .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  html[data-theme="B"] .image_wrapper {
+    width: 250px;
+    height: 250px;
+  }
+  html[data-theme="B"] .modal_btn {
+    padding: 8px 16px;
+    margin-top: 12px;
+  }
+
+  html[data-theme="B"] .order_btn_text {
+    font-size: 20px;
+    text-align: center;
+  }
+}
