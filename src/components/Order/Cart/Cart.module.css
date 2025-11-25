@@ -80,4 +80,8 @@
     font-size: 20px;
     margin-top: 16px;
   }
+
+  html[data-theme="B"] .headerImage {
+    display: none;
+  }
 }

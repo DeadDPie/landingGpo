@@ -88,3 +88,25 @@ html[data-theme="B"] .bottom_container {
   align-items: center;
   margin-top: 0px;
 }
+
+@media (max-width: 768px) {
+  html[data-theme="B"] .card {
+    border: 1px solid var(--color-border-main);
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    padding: 12px 12px 8px 12px;
+  }
+
+  html[data-theme="B"] .image {
+    height: 160px;
+    width: 160px;
+  }
+
+  html[data-theme="B"] .title_text {
+    font-size: 20px;
+  }
+  html[data-theme="B"] .button_choose {
+    margin-top: 8px;
+  }
+}

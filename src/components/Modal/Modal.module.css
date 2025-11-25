@@ -17,7 +17,7 @@
   border-radius: 20px;
   position: relative;
   max-width: 400px;
-  width: 90%;
+  width: 100%;
 }
 
 .closeBtn {
@@ -43,4 +43,17 @@ html[data-theme="B"] .closeBtn {
   border: 2px solid var(--color-border-main);
   width: 32px;
   height: 32px;
+}
+
+@media (max-width: 768px) {
+  html[data-theme="B"] .modal {
+    max-width: 320px;
+    padding: 34px 16px 34px 16px;
+  }
+
+  html[data-theme="B"] .closeBtn {
+    border: 2px solid var(--color-border-main);
+    width: 28px;
+    height: 28px;
+  }
 }
