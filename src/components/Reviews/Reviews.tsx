@@ -80,12 +80,37 @@ export default function Reviews() {
                       />
                     </div>
                   )}
-
                   <Typography variant="p1" as="p" className={styles.review_text}>
                     {review.text}
                   </Typography>
                 </div>
               ))}
+            </div>
+            
+            <div className={styles.carousel_container}>
+              <button className={styles.carousel_arrow} onClick={prevReview}>
+                <IconChevronLeft />
+              </button>
+              
+              <div className={styles.carousel_card}>
+                {"image" in currentReview && (
+                  <div className={styles.carousel_image_container}>
+                    <Image
+                      src={currentReview.image || "/images/placeholder.png"}
+                      alt="review"
+                      fill
+                      className={styles.review_image}
+                    />
+                  </div>
+                )}
+                <Typography variant="p1" as="p" className={styles.carousel_text}>
+                  {currentReview.text}
+                </Typography>
+              </div>
+              
+              <button className={styles.carousel_arrow} onClick={nextReview}>
+                <IconChevronRight />
+              </button>
             </div>
           </div>
         </div>

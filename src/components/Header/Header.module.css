@@ -194,3 +194,100 @@ html[data-theme="B"] .icon {
   width: 40px;
   height: auto;
 }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  html[data-theme="B"] .header {
+    height: 60px;
+    padding: 1rem 0;
+  }
+
+  html[data-theme="B"] .logo_icon {
+    width: 24px;
+  }
+
+  html[data-theme="B"] .link {
+    font-size: 15px;
+  }
+
+  html[data-theme="B"] .contacts {
+    display: none;
+  }
+
+  html[data-theme="B"] .icons {
+    gap: 1rem;
+  }
+
+  html[data-theme="B"] .social_icons {
+    gap: 1rem;
+  }
+
+  html[data-theme="B"] .social_icons .icon,
+  html[data-theme="B"] .cart_link .icon {
+    width: 30px;
+  }
+
+  html[data-theme="B"] .nav {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html[data-theme="B"] .header {
+    height: 82px;
+    padding: 1rem 0;
+  }
+
+  html[data-theme="B"] .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 0 1rem;
+  }
+
+  html[data-theme="B"] .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    order: 1;
+  }
+
+  html[data-theme="B"] .logo_icon {
+    width: 18px;
+  }
+
+  html[data-theme="B"] .nav {
+    display: none;
+  }
+
+  html[data-theme="B"] .contacts {
+    order: 2;
+    margin-left: 10px;
+  }
+
+  html[data-theme="B"] .phone {
+    font-size: 14px;
+  }
+
+  html[data-theme="B"] .social_icons {
+    order: 3;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  html[data-theme="B"] .social_icons .icon {
+    width: 24px;
+  }
+
+  html[data-theme="B"] .cart_link {
+    order: 4;
+    margin-left: auto;
+  }
+  html[data-theme="B"] .cart_link .icon {
+    width: 25px;
+  }
+
+  html[data-theme="B"] .icons {
+    display: contents;
+  }
+}
